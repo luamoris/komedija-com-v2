@@ -1,0 +1,116 @@
+/* =================================
+   ROOT 
+==================================== */
+
+:root {
+
+   /* ===== NORMALIZE ===== */
+
+   /* Шрифт */
+   --f-family: "Rubik", sans-serif;
+   --f-optical-sizing: auto;
+   --f-weight: 400;
+   --f-style: normal;
+
+   /* Убирает синий фон объектов которые выделяются */
+   --tap-bg: rgba(0, 0, 0, 0);
+
+   /* Цвет выделенного текста */
+   --selection: rgba(0, 0, 0, 0.2);
+
+   /* ===== NORMALIZE END ===== */
+
+   /* Убирает синию обводку с картинки */
+   --noimage-bg: rgb(189, 189, 189);
+
+   /* Z-Index */
+   --z-index-bg: 1;
+   --z-index-content: 100;
+   --z-index-nav: 200;
+
+   /* Border */
+   --border-radius: 4px;
+
+   /* ===== THEMES SK ===== */
+
+   --sk-bg-color: linear-gradient(60deg, #1e1e1e, #111111);
+   --sk-nav-bg-color: linear-gradient(60deg, #1e1e1e, #212121, #1e1e1e, #212121);
+   --sk-nav-border: 1px solid #363636;
+
+   --sk-text-color: rgba(255, 255, 255, 1);
+   --sk-low-text-color: rgba(255, 255, 255, 0.6);
+
+   --sk-target-link-bg-color: transparent;
+   --sk-target-link-bg-hover-color: rgba(255, 255, 255, 0.1);
+
+   --sk-navi-link-bg-color: transparent;
+   --sk-navi-link-bg-hover-color: rgba(255, 255, 255, 0.1);
+   --sk-navi-link-bg-active-color: linear-gradient(60deg, rgba(62, 255, 187, 0.5), rgba(62, 210, 255, 0.5), rgba(62, 255, 187, 0.5), rgba(62, 210, 255, 0.5));
+
+   --sk-separator: rgba(255, 255, 255, 0.2);
+
+   /* ===== THEMES SK END ===== */
+
+   /* PX */
+   --h2: 24px;
+   --h3: 18px;
+   --h4: 16px;
+   --h5: 14px;
+   --h6: 12px;
+}
+
+/* =================================
+   THEMES COLORS
+==================================== */
+
+._scheme_color_winter {
+
+   /* ===== THEMES SK ===== */
+
+   --sk-bg-color: linear-gradient(60deg, #005CA7, #2D5399);
+
+   /* ===== THEMES SK END ===== */
+}
+
+._scheme_color_dark {
+   /* Цвет выделенного текста */
+   --selection: rgba(255, 255, 255, 0.2);
+
+   /* ===== THEMES SK ===== */
+
+   --sk-bg-color: linear-gradient(60deg, #1e1e1e, #111111);
+   --sk-nav-bg-color: linear-gradient(60deg, #1e1e1e, #212121, #1e1e1e, #212121);
+   --sk-nav-border: 1px solid #363636;
+
+   --sk-text-color: rgba(255, 255, 255, 1);
+   --sk-low-text-color: rgba(255, 255, 255, 0.6);
+
+   --sk-target-link-bg-color: transparent;
+   --sk-target-link-bg-hover-color: rgba(255, 255, 255, 0.1);
+
+   --sk-navi-link-bg-color: transparent;
+   --sk-navi-link-bg-hover-color: rgba(255, 255, 255, 0.1);
+   --sk-navi-link-bg-active-color: linear-gradient(60deg, rgba(62, 255, 187, 0.5), rgba(62, 210, 255, 0.5), rgba(62, 255, 187, 0.5), rgba(62, 210, 255, 0.5));
+
+   --sk-separator: rgba(255, 255, 255, 0.2);
+
+   /* ===== THEMES SK END ===== */
+}
+
+/* =================================
+   MEDIA
+==================================== */
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 500px) {}
+
+@media (max-width: 425px) {}
+
+@media (max-width: 375px) {}
+
+@media (max-width: 320px) {}
+
+/* ============ END :) ============ */

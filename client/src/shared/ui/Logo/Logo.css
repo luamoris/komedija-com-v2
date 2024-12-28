@@ -1,0 +1,41 @@
+/* =================================
+   LOGO
+==================================== */
+
+.logo {
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: start;
+   cursor: pointer;
+}
+
+.logo-pic {
+   height: inherit;
+   width: auto;
+}
+
+.logo-title {
+   margin: 0 10px;
+   height: inherit;
+   width: auto;
+}
+
+
+/* =================================
+   MEDIA
+==================================== */
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 500px) {}
+
+@media (max-width: 425px) {}
+
+@media (max-width: 375px) {}
+
+@media (max-width: 320px) {}
+
+/* ============ END :) ============ */

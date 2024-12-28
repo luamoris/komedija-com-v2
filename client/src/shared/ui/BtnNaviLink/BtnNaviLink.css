@@ -1,0 +1,62 @@
+/* =================================
+   BUTON NAVI LINK 
+==================================== */
+
+.navigation-item {
+   margin: 2px 0;
+   padding: 8px 10px;
+   width: 100%;
+   height: 36px;
+   border-radius: var(--border-radius);
+   cursor: pointer;
+
+   background: var(--sk-navi-link-bg-color);
+   transition: opacity 200ms ease-in-out, background-color 200ms ease-in-out;
+}
+
+.navigation-item:hover {
+   background: var(--sk-navi-link-bg-hover-color);
+}
+
+.navigation-item.navigation-item_active {
+   background: var(--sk-navi-link-bg-active-color);
+}
+
+.navi-link {
+   display: flex;
+   align-items: center;
+   justify-content: start;
+
+   text-decoration: none;
+}
+
+.navi-link__box {
+   margin-right: 10px;
+   width: 20px;
+   height: 20px;
+}
+
+.navi-link__title {
+   text-transform: capitalize;
+   font-weight: 400;
+   font-size: var(--h4);
+   color: var(--sk-text-color);
+}
+
+/* =================================
+   MEDIA
+==================================== */
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 500px) {}
+
+@media (max-width: 425px) {}
+
+@media (max-width: 375px) {}
+
+@media (max-width: 320px) {}
+
+/* ============ END :) ============ */

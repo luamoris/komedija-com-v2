@@ -1,0 +1,100 @@
+/* =================================
+   SIDEBAR 
+==================================== */
+
+.sidebar {
+   z-index: var(--z-index-nav);
+   position: fixed;
+   top: 90px;
+   bottom: 5px;
+   left: 10px;
+
+   padding: 15px 15px;
+   width: 240px;
+   border-radius: var(--border-radius);
+
+   border: var(--sk-nav-border);
+   background: var(--sk-nav-bg-color);
+   background-size: 300%;
+   animation: gradientAnimation 10s infinite;
+
+   /* background-image: url('/pictures/img/duesseldorf.svg');
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: bottom; */
+
+   display: grid;
+   grid-template-rows: 1fr 30px;
+}
+
+.sidebar::before {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 0;
+
+   background-image: url('/pictures/img/duesseldorf.svg');
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: bottom;
+
+   width: 100%;
+   height: 200px;
+   user-select: none;
+   pointer-events: none;
+}
+
+/* =================================
+   HEADER 
+==================================== */
+
+.sidebar-header {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-self: start;
+}
+
+.sidebar-header__separator {
+   margin: 10px 0;
+   width: 100%;
+   height: 2px;
+   border-radius: 2px;
+   background-color: var(--sk-separator);
+}
+
+/* =================================
+   FOOTER 
+==================================== */
+
+.sidebar-footer {
+   width: 100%;
+   display: flex;
+   align-items: flex-end;
+   justify-content: start;
+}
+
+.sidebar-footer__title {
+   font-weight: 400;
+   font-size: var(--h6);
+   color: var(--sk-low-text-color);
+}
+
+/* =================================
+   MEDIA
+==================================== */
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 500px) {}
+
+@media (max-width: 425px) {}
+
+@media (max-width: 375px) {}
+
+@media (max-width: 320px) {}
+
+/* ============ END :) ============ */

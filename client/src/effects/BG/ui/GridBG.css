@@ -1,0 +1,37 @@
+/* =================================
+   SCREEN
+==================================== */
+
+.screen {
+   z-index: var(--z-index-bg);
+
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   background: var(--sk-bg-color);
+}
+
+/* =================================
+   MEDIA
+==================================== */
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 500px) {}
+
+@media (max-width: 425px) {}
+
+@media (max-width: 375px) {}
+
+@media (max-width: 320px) {}
+
+/* ============ END :) ============ */
