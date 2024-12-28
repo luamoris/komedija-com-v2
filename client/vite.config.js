@@ -12,18 +12,6 @@ export default defineConfig({
    build: {
       outDir: 'dist', // Директория для сборки
       sourcemap: false, // Отключает sourcemap для продакшена
-      rollupOptions: {
-         output: {
-            // Настройка путей для выходных файлов
-            entryFileNames: 'assets/js/[name].js',
-            chunkFileNames: 'assets/js/[name].js',
-            assetFileNames: ({ name }) => {
-               if (name && name.endsWith('.css')) {
-                  return 'assets/css/[name].css';
-               }
-               return 'assets/[name].[ext]';
-            },
-         },
-      },
+      assetsDir: 'assets',
    },
 });
