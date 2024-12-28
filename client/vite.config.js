@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import compression from 'vite-plugin-compression';
 
 // https://vite.dev/config/
 // export default defineConfig({
@@ -9,7 +8,6 @@ import compression from 'vite-plugin-compression';
 
 export default defineConfig({
    plugins: [react()],
-   base: '/komedija-com-v2/',
    build: {
       outDir: 'dist', // Директория для сборки
       sourcemap: false, // Отключает sourcemap для продакшена
