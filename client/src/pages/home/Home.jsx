@@ -1,19 +1,25 @@
-import React from "react";
+import React, {useContext} from "react";
 import { NavLink } from "react-router-dom";
 
-import HeadMeta from "../../effects/HeadMeta/HeadMeta";
 import "./Home.css";
+import {LanguageContext} from "../../shared/context/LanguageContext.jsx";
+import Page from "../../effects/Page/Page.jsx";
 
-export default function Home({ LANG, ...props }) {
-   return (
-      <>
-         {/* META */}
-         <HeadMeta path={LANG.path} meta={LANG.meta} {...props} />
-         {/* CONTENT */}
-         <h1 style={{ color: "#ffffff" }}>HOME CONTENT</h1>
-         <NavLink to="/ru" style={{ color: "#ffffff", margin: '10px' }}>RU</NavLink>
-         <NavLink to="/en" style={{ color: "#ffffff", margin: '10px' }}>EN</NavLink>
-         <NavLink to="/de" style={{ color: "#ffffff", margin: '10px' }}>DE</NavLink>
-      </>
+export default function Home() {
+    const {CODE, SET_CODE, ROUTES, TL} = useContext(LanguageContext);
+    const head = {
+        title: TL.HOME.meta.title,
+        description: TL.HOME.meta.description,
+        keywords: TL.HOME.meta.keywords,
+        path: ROUTES.HOME.path.long
+    };
+
+    return (
+        <Page head={head}>
+            <h1 style={{color: "#ffffff"}}>HOME CONTENT</h1>
+            <div onClick={() => SET_CODE('ru')} style={{color: "#ffffff", margin: '10px', cursor: 'pointer'}}>RU</div>
+            <div onClick={() => SET_CODE('en')} style={{color: "#ffffff", margin: '10px', cursor: 'pointer'}}>EN</div>
+            <div onClick={() => SET_CODE('de')} style={{color: "#ffffff", margin: '10px', cursor: 'pointer'}}>DE</div>
+        </Page>
    );
 }

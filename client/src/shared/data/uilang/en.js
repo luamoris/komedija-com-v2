@@ -1,13 +1,5 @@
-import { CONFIG } from "./config";
-
-const _LANG = 'en';
-
 export const en = {
    HOME: {
-      path: {
-         short: CONFIG.path.home.replace(CONFIG.lang.pattern, _LANG),
-         long: CONFIG.domain + CONFIG.path.home.replace(CONFIG.lang.pattern, _LANG),
-      },
       navIcon: {
          src: '/pictures/page-icons/home.svg',
          alt: 'Home page.',
@@ -19,10 +11,6 @@ export const en = {
       }
    },
    LOGIN: {
-      path: {
-         short: CONFIG.path.login.replace(CONFIG.lang.pattern, _LANG),
-         long: CONFIG.domain + CONFIG.path.login.replace(CONFIG.lang.pattern, _LANG),
-      },
       navIcon: {
          src: '/pictures/page-icons/profile.svg',
          alt: 'Login page.',
@@ -34,10 +22,6 @@ export const en = {
       }
    },
    POSTERS: {
-      path: {
-         short: CONFIG.path.posters.replace(CONFIG.lang.pattern, _LANG),
-         long: CONFIG.domain + CONFIG.path.posters.replace(CONFIG.lang.pattern, _LANG),
-      },
       navIcon: {
          src: '/pictures/page-icons/poster.svg',
          alt: 'Posters page.',
@@ -49,10 +33,6 @@ export const en = {
       }
    },
    PROFILE: {
-      path: {
-         short: CONFIG.path.profile.replace(CONFIG.lang.pattern, _LANG),
-         long: CONFIG.domain + CONFIG.path.profile.replace(CONFIG.lang.pattern, _LANG),
-      },
       navIcon: {
          src: '/pictures/page-icons/profile.svg',
          alt: 'Profile page',
@@ -64,10 +44,6 @@ export const en = {
       }
    },
    NOTFOUND: {
-      path: {
-         short: CONFIG.path.e404,
-         long: CONFIG.domain + '/' + CONFIG.path.e404,
-      },
       navIcon: {
          src: '',
          alt: '',

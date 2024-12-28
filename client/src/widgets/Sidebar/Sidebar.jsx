@@ -1,12 +1,12 @@
 import React from "react";
 
-import SocialList from "../SocialList/SocialList.jsx";
-import NaviList from "../NaviList/NaviList.jsx";
+import SocialList from "../SocialList/SocialList";
+import NaviList from "../NaviList/NaviList";
 import './Sidebar.css';
 
 import { socialMedia } from "../../shared/data/socialMedia.data";
 
-function Sidebar({ LANG }) {
+function Sidebar() {
    const footerText = '© Stand Up Community "KOMEDIJA"';
 
    return (
@@ -16,7 +16,7 @@ function Sidebar({ LANG }) {
             <div className="sidebar-header">
 
                <div className="sidebar-header__separator"></div>
-               <NaviList LANG={LANG} />
+               <NaviList />
                <div className="sidebar-header__separator"></div>
                <SocialList list={socialMedia} />
 

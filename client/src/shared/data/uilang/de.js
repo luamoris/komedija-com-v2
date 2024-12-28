@@ -1,13 +1,5 @@
-import { CONFIG } from "./config";
-
-const _LANG = 'de';
-
 export const de = {
    HOME: {
-      path: {
-         short: CONFIG.path.home.replace(CONFIG.lang.pattern, _LANG),
-         long: CONFIG.domain + CONFIG.path.home.replace(CONFIG.lang.pattern, _LANG),
-      },
       navIcon: {
          src: '/pictures/page-icons/home.svg',
          alt: 'Home Seit.',
@@ -19,10 +11,6 @@ export const de = {
       }
    },
    LOGIN: {
-      path: {
-         short: CONFIG.path.login.replace(CONFIG.lang.pattern, _LANG),
-         long: CONFIG.domain + CONFIG.path.login.replace(CONFIG.lang.pattern, _LANG),
-      },
       navIcon: {
          src: '/pictures/page-icons/profile.svg',
          alt: 'Anmelde Seit.',
@@ -34,10 +22,6 @@ export const de = {
       }
    },
    POSTERS: {
-      path: {
-         short: CONFIG.path.posters.replace(CONFIG.lang.pattern, _LANG),
-         long: CONFIG.domain + CONFIG.path.posters.replace(CONFIG.lang.pattern, _LANG),
-      },
       navIcon: {
          src: '/pictures/page-icons/poster.svg',
          alt: 'Veranstaltungen Seit',
@@ -49,10 +33,6 @@ export const de = {
       }
    },
    PROFILE: {
-      path: {
-         short: CONFIG.path.profile.replace(CONFIG.lang.pattern, _LANG),
-         long: CONFIG.domain + CONFIG.path.profile.replace(CONFIG.lang.pattern, _LANG),
-      },
       navIcon: {
          src: '/pictures/page-icons/profile.svg',
          alt: 'Profil Seit.',
@@ -64,10 +44,6 @@ export const de = {
       }
    },
    NOTFOUND: {
-      path: {
-         short: CONFIG.path.e404,
-         long: CONFIG.domain + '/' + CONFIG.path.e404,
-      },
       navIcon: {
          src: '',
          alt: '',

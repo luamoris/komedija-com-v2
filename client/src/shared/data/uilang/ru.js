@@ -1,13 +1,5 @@
-import { CONFIG } from "./config";
-
-const _LANG = 'ru';
-
 export const ru = {
    HOME: {
-      path: {
-         short: CONFIG.path.home.replace(CONFIG.lang.pattern, _LANG),
-         long: CONFIG.domain + CONFIG.path.home.replace(CONFIG.lang.pattern, _LANG),
-      },
       navIcon: {
          src: '/pictures/page-icons/home.svg',
          alt: 'Главная страница.',
@@ -19,10 +11,6 @@ export const ru = {
       }
    },
    LOGIN: {
-      path: {
-         short: CONFIG.path.login.replace(CONFIG.lang.pattern, _LANG),
-         long: CONFIG.domain + CONFIG.path.login.replace(CONFIG.lang.pattern, _LANG),
-      },
       navIcon: {
          src: '/pictures/page-icons/profile.svg',
          alt: 'Страница авторизации.',
@@ -34,10 +22,6 @@ export const ru = {
       }
    },
    POSTERS: {
-      path: {
-         short: CONFIG.path.posters.replace(CONFIG.lang.pattern, _LANG),
-         long: CONFIG.domain + CONFIG.path.posters.replace(CONFIG.lang.pattern, _LANG),
-      },
       navIcon: {
          src: '/pictures/page-icons/poster.svg',
          alt: 'Страница событий.',
@@ -49,10 +33,6 @@ export const ru = {
       }
    },
    PROFILE: {
-      path: {
-         short: CONFIG.path.profile.replace(CONFIG.lang.pattern, _LANG),
-         long: CONFIG.domain + CONFIG.path.profile.replace(CONFIG.lang.pattern, _LANG),
-      },
       navIcon: {
          src: '/pictures/page-icons/profile.svg',
          alt: 'Страница профиля.',
@@ -64,10 +44,6 @@ export const ru = {
       }
    },
    NOTFOUND: {
-      path: {
-         short: CONFIG.path.e404,
-         long: CONFIG.domain + '/' + CONFIG.path.e404,
-      },
       navIcon: {
          src: '',
          alt: '',
