@@ -9,9 +9,18 @@ import compression from 'vite-plugin-compression';
 
 export default defineConfig({
    plugins: [react()],
+   base: '/komedija-com-v2/',
    build: {
       outDir: 'dist', // Директория для сборки
       sourcemap: false, // Отключает sourcemap для продакшена
       assetsDir: 'assets',
+      rollupOptions: {
+         output: {
+            // Для CSS файлов
+            entryFileNames: 'assets/[name].js',
+            chunkFileNames: 'assets/[name].js',
+            assetFileNames: 'assets/[name][extname]',
+         }
+      },
    },
 });
