@@ -31,6 +31,6 @@ jobs:
     - name: Deploy to client-page branch
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.PERSONAL_TOKEN }}
         publish_dir: ./client/dist
         destination_branch: client-page
