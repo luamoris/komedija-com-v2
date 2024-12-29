@@ -1,1 +1,1 @@
-# komedija-com-v2
+# BETA.KOMEDIJA.COM

@@ -1,8 +1,8 @@
 /* =================================
-   BUTON NAVI LINK 
+   BUTTON NAVI LINK
 ==================================== */
 
-.navigation-item {
+.navigation__item {
    margin: 2px 0;
    padding: 8px 10px;
    width: 100%;
@@ -14,11 +14,11 @@
    transition: opacity 200ms ease-in-out, background-color 200ms ease-in-out;
 }
 
-.navigation-item:hover {
+.navigation__item:hover {
    background: var(--sk-navi-link-bg-hover-color);
 }
 
-.navigation-item.navigation-item_active {
+.navigation__item.navigation__item_active {
    background: var(--sk-navi-link-bg-active-color);
 }
 

@@ -1,5 +1,3 @@
-import React from "react";
-
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter } from "react-router-dom";
 
@@ -10,8 +8,8 @@ import Header from "../widgets/Header/Header";
 import Sidebar from "../widgets/Sidebar/Sidebar";
 import AppRouter from "./routes/AppRouter";
 
-function AppContent() {
 
+function AppContent() {
    return (
       <>
          <Header />
@@ -20,6 +18,7 @@ function AppContent() {
       </>
    );
 }
+
 
 export default function App() {
    return (

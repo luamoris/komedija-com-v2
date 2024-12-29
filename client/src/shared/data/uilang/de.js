@@ -23,7 +23,7 @@ export const de = {
    },
    POSTERS: {
       navIcon: {
-         src: '/pictures/page-icons/poster.svg',
+         src: '/pictures/page-icons/posters.svg',
          alt: 'Veranstaltungen Seit',
       },
       meta: {

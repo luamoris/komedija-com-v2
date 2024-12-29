@@ -1,17 +1,20 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 
 import "./Profile.css";
 
-import Page from "../../effects/Page/Page.jsx";
 import { LanguageContext } from "../../shared/context/LanguageContext.jsx";
 
+import Page from "../../effects/Page/Page.jsx";
+
+
 export default function Profile() {
-   const { CODE, SET_CODE, ROUTES, TL } = useContext(LanguageContext);
+   const { ROUTES, TL } = useContext(LanguageContext);
    const head = {
-      title: TL.HOME.meta.title,
-      description: TL.HOME.meta.description,
-      keywords: TL.HOME.meta.keywords,
-      path: ROUTES.HOME.path.long
+      type: "profile",
+      title: TL.PROFILE.meta.title,
+      description: TL.PROFILE.meta.description,
+      keywords: TL.PROFILE.meta.keywords,
+      path: ROUTES.PROFILE.path.long
    };
 
    return (

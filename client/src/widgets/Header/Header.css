@@ -18,10 +18,23 @@
    background-size: 300%;
    animation: gradientAnimation 10s infinite;
 
-   display: flex;
-   align-items: center;
-   justify-content: start;
+   display: grid;
+   grid-template-columns: auto 1fr;
 
+}
+
+.header__top {
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.header_bottom {
+   height: 100%;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
 }
 
 /* =================================

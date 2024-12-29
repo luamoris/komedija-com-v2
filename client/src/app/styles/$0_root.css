@@ -34,8 +34,10 @@
    /* ===== THEMES SK ===== */
 
    --sk-bg-color: linear-gradient(60deg, #1e1e1e, #111111);
+
    --sk-nav-bg-color: linear-gradient(60deg, #1e1e1e, #212121, #1e1e1e, #212121);
    --sk-nav-border: 1px solid #363636;
+   --sk-nav-bg-img: url("/pictures/img/duesseldorf.svg") no-repeat bottom / contain;
 
    --sk-text-color: rgba(255, 255, 255, 1);
    --sk-low-text-color: rgba(255, 255, 255, 0.6);
@@ -83,8 +85,10 @@
    /* ===== THEMES SK ===== */
 
    --sk-bg-color: linear-gradient(60deg, #1e1e1e, #111111);
+
    --sk-nav-bg-color: linear-gradient(60deg, #1e1e1e, #212121, #1e1e1e, #212121);
    --sk-nav-border: 1px solid #363636;
+   --sk-nav-bg-img: url("/pictures/img/duesseldorf.svg") no-repeat bottom / contain;
 
    --sk-text-color: rgba(255, 255, 255, 1);
    --sk-low-text-color: rgba(255, 255, 255, 0.6);

@@ -4,6 +4,9 @@ export const CONFIG = {
    domain: 'https://beta.skomedija.com', // ЗАМЕНИТЬ НА ОРИГИНАЛЬНЫЙ ДОМЕН
    lang: {
       pattern: ':lang',
+      default: 'ru',
+      supported: ['ru', 'en', 'de'],
+      country: 'DE',
    },
    path: {
       home: '/:lang',
@@ -12,4 +15,13 @@ export const CONFIG = {
       profile: '/:lang/profile',
       e404: '*',
    },
+   og: {
+      type: {
+         home: 'website',
+         login: 'website',
+         posters: 'website',
+         profile: 'website',
+         e404: 'website',
+      }
+   }
 };

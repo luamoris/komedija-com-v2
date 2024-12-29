@@ -23,7 +23,7 @@ export const ru = {
    },
    POSTERS: {
       navIcon: {
-         src: '/pictures/page-icons/poster.svg',
+         src: '/pictures/page-icons/posters.svg',
          alt: 'Страница событий.',
       },
       meta: {

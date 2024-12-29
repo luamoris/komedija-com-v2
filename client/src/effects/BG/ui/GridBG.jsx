@@ -1,10 +1,10 @@
-import React from 'react';
-import { useEffect, useRef } from 'react';
+import { memo, useEffect, useRef } from 'react';
 
-import GridBG from '../lib/GridBG.js';
 import './GridBG.css';
+import GridBG from '../lib/GridBG.js';
 
-export default function GridCanvas() {
+
+function GridCanvas() {
    const canvasRef = useRef(null);
    const gridRef = useRef(null);
 
@@ -16,4 +16,7 @@ export default function GridCanvas() {
    }, []);
 
    return <canvas id='canvasGridBG' ref={canvasRef} />
-};
+}
+
+
+export default memo(GridCanvas);

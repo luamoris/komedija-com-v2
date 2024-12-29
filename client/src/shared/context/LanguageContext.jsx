@@ -1,15 +1,14 @@
-import React, { createContext, useEffect, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 
 import { PAGE_PATH } from "../data/uilang/path.js";
+import {CONFIG} from "../data/uilang/config.js";
 import { LANG } from "../data/uilang/lang.js";
 
-export const LanguageContext = createContext();
-
-const supportedLanguages = ['ru', 'en', 'de'];
 
 const getInitialLanguage = () => {
 
-   const isCode = (code) => code && supportedLanguages.includes(code);
+   const isCode = (code) => code && CONFIG.lang.supported.includes(code);
 
    // Browser Path
    const browserCode = window.location.pathname.split('/')[1];
@@ -23,10 +22,13 @@ const getInitialLanguage = () => {
    const localCode = navigator.language.split("-")?.[0];
    if (isCode(localCode)) return localCode;
 
-   return 'en';
+   return CONFIG.lang.default;
 }
 
 const getPath = PAGE_PATH;
+
+
+export const LanguageContext = createContext(null);
 
 export const LanguageProvider = ({ children }) => {
    const [code, setCode] = useState(getInitialLanguage());
@@ -50,5 +52,8 @@ export const LanguageProvider = ({ children }) => {
          {children}
       </LanguageContext.Provider>
    )
+};
 
-}
+LanguageProvider.propTypes = {
+   children: PropTypes.node.isRequired,
+};

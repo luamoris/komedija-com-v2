@@ -1,17 +1,20 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 
 import "./NotFound.css";
 
-import Page from "../../effects/Page/Page.jsx";
 import { LanguageContext } from "../../shared/context/LanguageContext.jsx";
 
+import Page from "../../effects/Page/Page.jsx";
+
+
 export default function NotFound() {
-   const { CODE, SET_CODE, ROUTES, TL } = useContext(LanguageContext);
+   const { ROUTES, TL } = useContext(LanguageContext);
    const head = {
-      title: TL.HOME.meta.title,
-      description: TL.HOME.meta.description,
-      keywords: TL.HOME.meta.keywords,
-      path: ROUTES.HOME.path.long
+      type: "e404",
+      title: TL.NOTFOUND.meta.title,
+      description: TL.NOTFOUND.meta.description,
+      keywords: TL.NOTFOUND.meta.keywords,
+      path: ROUTES.NOTFOUND.path.long
    };
 
    return (

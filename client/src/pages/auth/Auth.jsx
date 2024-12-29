@@ -1,18 +1,21 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import "./Auth.css";
 
-import Page from "../../effects/Page/Page.jsx";
 import { LanguageContext } from "../../shared/context/LanguageContext.jsx";
 
+import Page from "../../effects/Page/Page.jsx";
+
+
 export default function Auth() {
-   const { CODE, SET_CODE, ROUTES, TL } = useContext(LanguageContext);
+   const { ROUTES, TL } = useContext(LanguageContext);
    const head = {
-      title: TL.HOME.meta.title,
-      description: TL.HOME.meta.description,
-      keywords: TL.HOME.meta.keywords,
-      path: ROUTES.HOME.path.long
+      type: "login",
+      title: TL.LOGIN.meta.title,
+      description: TL.LOGIN.meta.description,
+      keywords: TL.LOGIN.meta.keywords,
+      path: ROUTES.LOGIN.path.long
    };
 
    const location = useLocation();
