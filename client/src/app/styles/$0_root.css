@@ -31,6 +31,17 @@
    /* Border */
    --border-radius: 4px;
 
+   /* SIDEBAR */
+   --sidebar-width: 240px;
+   --sidebar-width-short: 70px;
+
+   /* PADDING */
+   --global-padding: 15px;
+
+   /* ANIMATIONS */
+   --animation-ms-s: 150ms;
+   --animation-ms-m: 200ms;
+
    /* ===== THEMES SK ===== */
 
    --sk-bg-color: linear-gradient(60deg, #1e1e1e, #111111);
