@@ -1,7 +1,8 @@
 import React from 'react';
 
-import Icon from '../Icon/Icon';
 import './BtnTargetLink.css';
+
+import Icon from '../Icon/Icon';
 
 export default function BtnTargetLink({ href, src, title, alt = '' }) {
    return (

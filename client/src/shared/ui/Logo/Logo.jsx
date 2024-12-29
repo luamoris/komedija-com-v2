@@ -1,9 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+import "./Logo.css";
+
 import logoSVG from "/pictures/img/logo.svg";
 import titleSVG from '/pictures/img/title.svg';
-import "./Logo.css";
 
 const ALT_LOGO = {
    logoPic: 'Stand Up Komedija logotype.',

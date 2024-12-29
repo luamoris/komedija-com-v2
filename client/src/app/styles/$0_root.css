@@ -49,6 +49,10 @@
 
    --sk-separator: rgba(255, 255, 255, 0.2);
 
+   --sk-lang-text-color: rgba(255, 255, 255, 1);
+   --sk-lang-text-low-color: rgba(255, 255, 255, 0.6);
+   --sk-lang-text-active-color: rgba(255, 99, 71, 1);
+
    /* ===== THEMES SK END ===== */
 
    /* PX */
@@ -93,6 +97,10 @@
    --sk-navi-link-bg-active-color: linear-gradient(60deg, rgba(62, 255, 187, 0.5), rgba(62, 210, 255, 0.5), rgba(62, 255, 187, 0.5), rgba(62, 210, 255, 0.5));
 
    --sk-separator: rgba(255, 255, 255, 0.2);
+
+   --sk-lang-text-color: rgba(255, 255, 255, 1);
+   --sk-lang-text-low-color: rgba(255, 255, 255, 0.6);
+   --sk-lang-text-active-color: rgba(255, 99, 71, 1);
 
    /* ===== THEMES SK END ===== */
 }

@@ -1,21 +1,23 @@
 import React from "react";
 
-import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter } from "react-router-dom";
+
+import { LanguageProvider } from "../shared/context/LanguageContext";
+import AppLocation from "./location/AppLocation";
 
 import Header from "../widgets/Header/Header";
 import Sidebar from "../widgets/Sidebar/Sidebar";
 import AppRouter from "./routes/AppRouter";
-import { LanguageProvider} from "../shared/context/LanguageContext";
 
 function AppContent() {
 
    return (
-       <>
-          <Header />
-          <Sidebar />
-          <AppRouter />
-       </>
+      <>
+         <Header />
+         <Sidebar />
+         <AppRouter />
+      </>
    );
 }
 
@@ -24,7 +26,11 @@ export default function App() {
       <HelmetProvider>
          <BrowserRouter>
             <LanguageProvider>
-               <AppContent />
+               <AppLocation>
+
+                  <AppContent />
+
+               </AppLocation>
             </LanguageProvider>
          </BrowserRouter>
       </HelmetProvider>

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-import Icon from "../Icon/Icon";
 import "./BtnNaviLink.css";
+
+import Icon from "../Icon/Icon";
 
 export default function BtnNaviLink({ path, src, title, alt = '' }) {
 

@@ -1,7 +1,7 @@
 export const CONFIG = {
    name: 'Stand Up Komedija',
    shortName: 'Komedija',
-   domain: 'beta.skomedija.com', // ЗАМЕНИТЬ НА ОРИГИНАЛЬНЫЙ ДОМЕН
+   domain: 'https://beta.skomedija.com', // ЗАМЕНИТЬ НА ОРИГИНАЛЬНЫЙ ДОМЕН
    lang: {
       pattern: ':lang',
    },

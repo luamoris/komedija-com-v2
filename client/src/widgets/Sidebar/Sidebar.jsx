@@ -5,6 +5,7 @@ import NaviList from "../NaviList/NaviList";
 import './Sidebar.css';
 
 import { socialMedia } from "../../shared/data/socialMedia.data";
+import SwitchLang from "../../shared/ui/SwitchLang/SwitchLang";
 
 function Sidebar() {
    const footerText = '© Stand Up Community "KOMEDIJA"';
@@ -19,6 +20,8 @@ function Sidebar() {
                <NaviList />
                <div className="sidebar-header__separator"></div>
                <SocialList list={socialMedia} />
+               <div className="sidebar-header__separator"></div>
+               <SwitchLang />
 
             </div>
 
