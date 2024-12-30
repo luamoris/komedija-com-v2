@@ -19,7 +19,7 @@ export default function Home() {
 
    return (
       <Page head={head}>
-         <h1 style={{ color: "#ffffff" }}>HOME CONTENT</h1>
+         <h1 style={{ color: "#ffffff" }}>1HOME CONTENT</h1>
       </Page>
    );
 }

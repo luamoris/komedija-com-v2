@@ -25,7 +25,11 @@ class GridBG {
       this.squares = []; // Хранение информации о квадратах
       this.animationFrameId = null; // Для хранения id анимации
 
-      this.handleResize = () => this.init();
+      this._current = 0;
+      this.handleResize = () => {
+         if (this._current === this.side.getLength(window.innerWidth)) return;
+         this.init();
+      };
       window.addEventListener('resize', this.handleResize);
 
       this.init();
@@ -39,6 +43,7 @@ class GridBG {
       this.sideLength = this.side.getLength(window.innerWidth);
       this.gridSettings = this.calculate();
       this.squares = [];
+      this._current = this.sideLength;
 
       this.create();
       this.draw();

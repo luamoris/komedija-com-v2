@@ -7,8 +7,10 @@
    overflow: hidden;
    position: fixed;
    top: 90px;
-   bottom: 5px;
+   /*bottom: 5px;*/
    left: 10px;
+
+   height: calc(100lvh - 95px);
 
    padding: var(--global-padding);
    width: var(--sidebar-width);
