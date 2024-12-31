@@ -19,7 +19,7 @@ export default function Profile() {
 
    return (
       <Page head={head}>
-         <h1 style={{ color: "#ffffff" }}>PROFILE CONTENT</h1>
+         <h1 style={{ color: "#ffffff" }}>P</h1>
       </Page>
    );
 }

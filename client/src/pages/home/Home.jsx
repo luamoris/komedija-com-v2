@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { memo, useContext } from "react";
 
 import "./Home.css";
 
@@ -7,7 +7,7 @@ import { LanguageContext } from "../../shared/context/LanguageContext.jsx";
 import Page from "../../effects/Page/Page.jsx";
 
 
-export default function Home() {
+function Home() {
    const { ROUTES, TL } = useContext(LanguageContext);
    const head = {
       type: "home",
@@ -19,7 +19,9 @@ export default function Home() {
 
    return (
       <Page head={head}>
-         <h1 style={{ color: "#ffffff" }}>1HOME CONTENT</h1>
+         <h1 style={{ color: "#ffffff" }}>1H</h1>
       </Page>
    );
 }
+
+export default Home;

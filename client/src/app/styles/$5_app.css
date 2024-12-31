@@ -7,12 +7,17 @@
    z-index: var(--z-index-content);
    min-height: 100vh;
    width: 100%;
+
+   display: flex;
+   align-items: flex-start;
+   justify-content: center;
 }
 
 .app-container {
-   margin: 0 auto;
+   margin: 0 260px;
    padding: 90px 0 5px 0;
    max-width: 1440px;
+   width: 100%;
 }
 
 /* =================================
@@ -25,15 +30,29 @@
    /* height: calc(100vh - 95px); */
    height: 200vh;
    background-color: rgba(255, 255, 255, 0.05);
+   /*background-color: #1d1d1d;*/
 }
+
+/* =================================
+   DATASET-SIDEBAR="SHORT"
+==================================== */
+
+
 
 /* =================================
    MEDIA
 ==================================== */
 
 @media (max-width: 1960px) {
+
+   .app {
+      /*justify-content: flex-start;*/
+
+      transition: margin var(--animation-ms-m) ease-in-out;
+   }
+
    .app-container {
-      margin: 0 10px 0 260px;
+      margin: 0 10px 0 10px;
    }
 }
 

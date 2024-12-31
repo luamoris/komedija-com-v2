@@ -44,7 +44,7 @@
 
    /* ===== THEMES SK ===== */
 
-   --sk-bg-color: linear-gradient(60deg, #1e1e1e, #111111);
+   --sk-bg-color: linear-gradient(60deg, #1e1e1e, #1d1d1d);
 
    --sk-nav-bg-color: linear-gradient(60deg, #1e1e1e, #212121, #1e1e1e, #212121);
    --sk-nav-border: 1px solid #363636;
@@ -80,16 +80,39 @@
    THEMES COLORS
 ==================================== */
 
-._scheme_color_winter {
+[data-scheme="winter"] {
+
+   /* Цвет выделенного текста */
+   --selection: rgba(255, 255, 255, 0.2);
 
    /* ===== THEMES SK ===== */
 
    --sk-bg-color: linear-gradient(60deg, #005CA7, #2D5399);
 
+   --sk-nav-bg-color: linear-gradient(60deg, #1e1e1e, #212121, #1e1e1e, #212121);
+   --sk-nav-border: 1px solid #363636;
+   --sk-nav-bg-img: url("/pictures/img/duesseldorf.svg") no-repeat bottom / contain;
+
+   --sk-text-color: rgba(255, 255, 255, 1);
+   --sk-low-text-color: rgba(255, 255, 255, 0.6);
+
+   --sk-target-link-bg-color: transparent;
+   --sk-target-link-bg-hover-color: rgba(255, 255, 255, 0.1);
+
+   --sk-navi-link-bg-color: transparent;
+   --sk-navi-link-bg-hover-color: rgba(255, 255, 255, 0.1);
+   --sk-navi-link-bg-active-color: linear-gradient(60deg, rgba(62, 255, 187, 0.5), rgba(62, 210, 255, 0.5), rgba(62, 255, 187, 0.5), rgba(62, 210, 255, 0.5));
+
+   --sk-separator: rgba(255, 255, 255, 0.2);
+
+   --sk-lang-text-color: rgba(255, 255, 255, 1);
+   --sk-lang-text-low-color: rgba(255, 255, 255, 0.6);
+   --sk-lang-text-active-color: rgba(255, 99, 71, 1);
+
    /* ===== THEMES SK END ===== */
 }
 
-._scheme_color_dark {
+[data-scheme="dark"] {
    /* Цвет выделенного текста */
    --selection: rgba(255, 255, 255, 0.2);
 

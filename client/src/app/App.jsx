@@ -1,7 +1,7 @@
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter } from "react-router-dom";
 
-import { LanguageProvider } from "../shared/context/LanguageContext";
+import AppProvider from "./provider/AppProvider.jsx";
 import AppLocation from "./location/AppLocation";
 
 import Header from "../widgets/Header/Header";
@@ -24,13 +24,13 @@ export default function App() {
    return (
       <HelmetProvider>
          <BrowserRouter>
-            <LanguageProvider>
+            <AppProvider>
                <AppLocation>
 
                   <AppContent />
 
                </AppLocation>
-            </LanguageProvider>
+            </AppProvider>
          </BrowserRouter>
       </HelmetProvider>
    );

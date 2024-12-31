@@ -2,6 +2,10 @@
    WRAPPER
 ==================================== */
 
+body {
+   background: var(--sk-bg-color);
+}
+
 #wrapper {
    position: relative;
    min-width: 320px;
@@ -11,6 +15,19 @@
 /* =================================
    MEDIA
 ==================================== */
+
+@media (max-width: 1960px) {
+   #wrapper {
+      display: grid;
+      grid-template-columns: 250px auto;
+
+      transition: grid-template-columns var(--animation-ms-m) ease-in-out;
+   }
+
+   [data-sidebar="short"] #wrapper {
+      grid-template-columns: 80px auto;
+   }
+}
 
 @media (max-width: 1024px) {}
 

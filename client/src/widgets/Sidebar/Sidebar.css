@@ -87,32 +87,38 @@
 }
 
 /* =================================
-   SIDEBAR SHORT
+   DATASET-SIDEBAR="SHORT"
 ==================================== */
 
-.sidebar_short {
+[data-sidebar="short"] .sidebar {
    width: var(--sidebar-width-short);
 }
 
-.sidebar_short .sidebar-header__separator {
+[data-sidebar="short"] .sidebar-header__separator {
    width: calc(var(--sidebar-width-short) - 2 * var(--global-padding));
 }
 
-.sidebar_short .sidebar::before {
+[data-sidebar="short"] .sidebar::before {
    height: 65px;
 }
 
-.sidebar_short .sidebar-header, .sidebar_short .sidebar-footer {
+[data-sidebar="short"] .sidebar-header, [data-sidebar="short"] .sidebar-footer {
    width: calc(var(--sidebar-width-short) - 2 * var(--global-padding));
 }
 
-.sidebar_short .sidebar-footer__title {
+[data-sidebar="short"] .sidebar-footer__title {
    display: none;
 }
 
 /* =================================
    MEDIA
 ==================================== */
+
+@media (max-width: 1960px) {
+   .sidebar {
+      position: sticky;
+   }
+}
 
 @media (min-width: 1025px) {
    .burger-box:hover {

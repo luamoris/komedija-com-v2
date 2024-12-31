@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from 'react';
+import { createContext, useEffect, useState, useMemo, useCallback } from 'react';
 import PropTypes from 'prop-types';
 
 import { PAGE_PATH } from "../data/uilang/path.js";
@@ -40,15 +40,20 @@ export const LanguageProvider = ({ children }) => {
       document.documentElement.lang = code;
    }, [code]);
 
+   const handleSetCode = useCallback((newCode) => {
+      if (newCode === code) return;
+      setCode(newCode);
+   }, [code]);
+
+   const contextValue = useMemo(() => ({
+      CODE: code,
+      SET_CODE: handleSetCode,
+      ROUTES: localizedPath,
+      TL: LANG[code],
+   }), [code, localizedPath, handleSetCode]);
+
    return (
-      <LanguageContext.Provider value={
-         {
-            CODE: code,
-            SET_CODE: setCode,
-            ROUTES: localizedPath,
-            TL: LANG[code]
-         }
-      }>
+      <LanguageContext.Provider value={contextValue}>
          {children}
       </LanguageContext.Provider>
    )

@@ -34,12 +34,10 @@
     transition: transform var(--animation-ms-s) ease-out;
 }
 
-.lang__code:hover::after {
-    transform: translateY(0);
-}
-
 .lang__code.lang__code_active {
     color: var(--sk-lang-text-color);
+    pointer-events: none;
+    cursor: pointer;
 }
 
 .lang__code.lang__code_active::after {
@@ -51,8 +49,24 @@
    MEDIA
 ==================================== */
 
-@media (min-width: 1025px) {
+@media (hover:hover) {
+
+    .lang__code:hover::after {
+        transform: translateY(0);
+    }
+
     .lang__code:not(.lang__code_active):hover {
+        color: var(--sk-lang-text-color);
+    }
+}
+
+@media (hover:none) {
+
+    .lang__code:active::after {
+        transform: translateY(0);
+    }
+
+    .lang__code:not(.lang__code_active):active {
         color: var(--sk-lang-text-color);
     }
 }

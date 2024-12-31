@@ -25,7 +25,7 @@ export default function Auth() {
 
    return (
       <Page head={head}>
-         <h1 style={{ color: "#ffffff" }}>AUTH CONTENT - USER FROM {fromPage}</h1>
+         <h1 style={{ color: "#ffffff" }}>{fromPage}</h1>
       </Page>
    );
 }
