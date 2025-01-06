@@ -15,7 +15,7 @@ function SwitchLanguages({codes, currentCode, setCode}) {
       (newCode) => {
          setCode(newCode);
          const newPath = location.pathname.replace(currentCode, newCode);
-         navigate(newPath);
+         navigate(newPath, { replace: true });
       }, [location.pathname, navigate, setCode, currentCode]
    );
 
