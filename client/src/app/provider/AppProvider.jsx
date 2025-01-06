@@ -1,15 +1,18 @@
 import PropTypes from 'prop-types';
 
-import {LanguageProvider} from "../../shared/context/LanguageContext.jsx";
-import {GlobalSettingsProvider} from "../../shared/context/GlobalSettingsContext.jsx";
+// import { LanguageProvider } from "../../shared/context/LanguageContext.jsx";
+import { TranslationProvider } from '../../shared/context/TranslationContext.jsx';
+import { GlobalSettingsProvider } from "../../shared/context/GlobalSettingsContext.jsx";
 
 
-export default function AppProvider({children}) {
+export default function AppProvider({ children }) {
    return (
       <GlobalSettingsProvider>
-         <LanguageProvider>
+         <TranslationProvider>
+            {/* <LanguageProvider> */}
             {children}
-         </LanguageProvider>
+            {/* </LanguageProvider> */}
+         </TranslationProvider>
       </GlobalSettingsProvider>
    );
 };

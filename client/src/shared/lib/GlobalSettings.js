@@ -37,7 +37,6 @@ export default class GlobalSettings {
    setValueToStorage(type, value) { // true || false
       if (!this.getAlleTypes()?.includes(type)) return false;
       if (!this.getValuesByType(type)?.includes(value)) return false;
-      // const altValue = this.getCurrentByType(type);
       document.body.dataset[type] = value;
       localStorage.setItem(type, value);
       return true;
@@ -45,11 +44,11 @@ export default class GlobalSettings {
 
    // Получить объект ключей с текущими значениями
    getCurrentSettings() {
-      const res = {};
-      this.getAlleTypes()?.forEach((type) => {
-         res[type] = this.getCurrentByType(type);
-         document.body.dataset[type] = res[type];
-      })
-      return res;
+      return this.getAlleTypes()?.reduce((acc, type) => {
+         const value = this.getCurrentByType(type);
+         document.body.dataset[type] = value;
+         acc[type] = value;
+         return acc;
+      }, {})
    }
 }

@@ -6,6 +6,7 @@ export default function Private({ path, children }) {
    const auth = false;
 
    if (!auth) return <Navigate to={path} state={{ from: location }} replace />
+
    return children;
 }
 

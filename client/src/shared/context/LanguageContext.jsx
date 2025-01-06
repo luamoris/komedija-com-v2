@@ -2,7 +2,7 @@ import { createContext, useEffect, useState, useMemo, useCallback } from 'react'
 import PropTypes from 'prop-types';
 
 import { PAGE_PATH } from "../data/uilang/path.js";
-import {CONFIG} from "../data/uilang/config.js";
+import { CONFIG } from "../data/uilang/config.js";
 import { LANG } from "../data/uilang/lang.js";
 
 

@@ -1,11 +1,13 @@
 // Глобальные настройки приложения которые отображаются в классах тега body.
 
+
 // Все типы глобальных настроек
 export const TYPES = {
    scheme: 'scheme',
    devices: 'devices',
    sidebar: 'sidebar',
 };
+
 
 // Значения для Schemes
 export const SCHEMES = {
@@ -27,7 +29,8 @@ export const SIDEBAR = {
    long: 'long',
 };
 
-export const GLOBAL_SETTINGS = {
+
+export const APP_SETTINGS = {
    scheme: {
       type: TYPES.scheme,
       default: SCHEMES.winter,
