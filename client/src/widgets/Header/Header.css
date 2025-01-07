@@ -16,7 +16,8 @@
    border: var(--sk-nav-border);
    background: var(--sk-nav-bg-color);
    background-size: 300%;
-   animation: gradientAnimation 10s infinite;
+   backdrop-filter: var(--sk-nav-bg-filter);
+   animation: var(--sk-nav-animation);
 
    display: grid;
    grid-template-columns: auto 1fr;

@@ -16,7 +16,9 @@ export const TranslationProvider = ({ children }) => {
    const [code, setCode] = useState(translation.getCurrentCode());
 
    const codeUpdate = useCallback((code) => {
-      setCode(() => code)
+      const newCode = translation.setCode(code);
+      console.log(`${code} updated`);
+      setCode(() => newCode)
    }, []);
 
    const value = useMemo(() => ({ CODE: code, TRANSITION: translation }), [code]);

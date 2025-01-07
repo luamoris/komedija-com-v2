@@ -48,7 +48,9 @@ export default class Translation {
       if (browserCode) {
          if (this.isExist(browserCode)) info.code = browserCode;
          else info.ok = false;
-      } else {
+      }
+
+      if (!info.ok) {
          if (storageCode && this.isExist(storageCode)) info.code = storageCode;
          else if (localCode && this.isExist(localCode)) info.code = localCode;
       }
@@ -63,12 +65,14 @@ export default class Translation {
     * 3. Добавить язык в dataset тега body.
     */
    setCode(code) {
-      if (!this.isExist(code)) return { ok: false };
+      if (!this.isExist(code)) return this.getCurrentCode();
 
       const name = this._config.localStorageName;
       localStorage.setItem(name, code);
       document.documentElement.lang = code;
       document.body.dataset[name] = code;
+
+      return { ok: true, code };
    }
 
    /**

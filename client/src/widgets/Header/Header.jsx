@@ -1,28 +1,27 @@
-import { useContext, memo } from "react";
+import { memo } from "react";
 
 import './Header.css';
 
-// import { LanguageContext } from "../../shared/context/LanguageContext";
-
 import SwitchLanguages from "../SwitchLanguages/SwitchLanguages.jsx";
+
+import useTranslation from "../../shared/hooks/useTranslation.jsx";
+import useTranslationActions from "../../shared/hooks/useTranslationActions.jsx";
 
 import Logo from "../../shared/ui/Logo/Logo";
 
-import { CONFIG } from "../../shared/data/uilang/config.js";
 
 
 function Header() {
-   // const { CODE, SET_CODE, ROUTES } = useContext(LanguageContext);
+   const { CODE: code, TRANSITION: tr } = useTranslation();
+   const { SET_UPDATE: setCode } = useTranslationActions();
 
    return (
       <header className="header">
          <div className="header__top">
-            {/* <Logo classFather="header__logo" path={ROUTES.HOME.path.short} /> */}
             <Logo classFather="header__logo" path='/' />
          </div>
          <div className="header_bottom">
-            {/* <SwitchLanguages codes={CONFIG.lang.supported} currentCode={CODE} setCode={SET_CODE} /> */}
-            <SwitchLanguages codes={['ru', 'en', 'de']} currentCode="ru" setCode={() => ''} />
+            <SwitchLanguages codes={tr.getCodes()} currentCode={code.code} setCode={setCode} />
          </div>
       </header>
    );

@@ -15,7 +15,13 @@ export default function AppLocation({ children }) {
 
    console.log("App Location");
 
+   if (tr.TRANSITION.getCurrentCode().code !== tr.CODE.code) {
+      // console.log('!===');
+      // window.location.href = location.pathname;
+   }
+
    useEffect(() => {
+      // console.clear();
       console.log("App Location Effect");
       console.log(`== Path: ${JSON.stringify(location)}`);
       console.log(`== Code CTX: ${JSON.stringify(tr.CODE)}`);
@@ -35,6 +41,9 @@ export default function AppLocation({ children }) {
 
       if (currentCode.code !== tr.CODE.code) {
          console.log('====> Изменился маршрут!');
+         // tra.SET_UPDATE(currentCode.code);
+         // navigate(location.pathname);
+         // window.location.href = location.pathname;
       }
 
    }, [location]);

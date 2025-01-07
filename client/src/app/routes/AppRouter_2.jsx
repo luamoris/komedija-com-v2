@@ -10,13 +10,14 @@ import Private from "../../shared/hoc/Private";
 import Profile from "../../pages/profile/Profile";
 
 import useTranslation from "../../shared/hooks/useTranslation.jsx";
-
 import { APP_ROUTES } from "../../shared/data_2/app.routes.js";
+
+import {APP_CONFIG as ac} from "../../shared/data_2/app.config.js";
 
 
 export default function AppRouter_2() {
    const { CODE } = useTranslation();
-   const pathes = APP_ROUTES(CODE.code);
+   const paths = APP_ROUTES(CODE.code);
 
    return (
       <Suspense fallback={<div>Loading...</div>}>
@@ -24,16 +25,16 @@ export default function AppRouter_2() {
 
             <Route path="/" element={<Layout />}>
 
-               <Route index element={<Navigate to={pathes.home.short} replace />} />
+               <Route index element={<Navigate to={paths.home.short} replace />} />
 
-               <Route path={pathes.home.short} element={<Home />} />
-               <Route path={pathes.login.short} element={<Auth />} />
-               <Route path={pathes.posters.short} element={<Posters />} />
+               <Route path={ac.path.home} element={<Home />} />
+               <Route path={ac.path.login} element={<Auth />} />
+               <Route path={ac.path.posters} element={<Posters />} />
 
-               <Route path={pathes.profile.short} element={<Private path={pathes.login.short}><Profile /></Private>} />
+               <Route path={ac.path.profile} element={<Private path={ac.path.login}><Profile /></Private>} />
 
 
-               <Route path={pathes.notFound.short} element={<NotFound />} />
+               <Route path={ac.path.notFound} element={<NotFound />} />
 
             </Route>
 

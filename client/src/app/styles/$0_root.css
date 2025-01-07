@@ -49,6 +49,8 @@
    --sk-nav-bg-color: linear-gradient(60deg, #1e1e1e, #212121, #1e1e1e, #212121);
    --sk-nav-border: 1px solid #363636;
    --sk-nav-bg-img: url("/pictures/img/duesseldorf.svg") no-repeat bottom / contain;
+   --sk-nav-animation: gradientAnimation 100s infinite;
+   --sk-nav-bg-filter: blur(4px);
 
    --sk-text-color: rgba(255, 255, 255, 1);
    --sk-low-text-color: rgba(255, 255, 255, 0.6);
@@ -89,9 +91,17 @@
 
    --sk-bg-color: linear-gradient(60deg, #005CA7, #2D5399);
 
-   --sk-nav-bg-color: linear-gradient(60deg, #1e1e1e, #212121, #1e1e1e, #212121);
-   --sk-nav-border: 1px solid #363636;
+   --sk-nav-bg-color: linear-gradient(
+           60deg,
+           rgba(80, 144, 191, .5),
+           rgba(0, 92, 167, .5),
+           rgba(45, 83, 153, .5),
+           rgba(0, 53, 89, .5)
+   );
+   --sk-nav-border: 1px solid rgba(255, 255, 255, 0.1);
    --sk-nav-bg-img: url("/pictures/img/duesseldorf.svg") no-repeat bottom / contain;
+   --sk-nav-animation: gradientAnimation 100s infinite;
+   --sk-nav-bg-filter: blur(4px);
 
    --sk-text-color: rgba(255, 255, 255, 1);
    --sk-low-text-color: rgba(255, 255, 255, 0.6);
@@ -123,6 +133,8 @@
    --sk-nav-bg-color: linear-gradient(60deg, #1e1e1e, #212121, #1e1e1e, #212121);
    --sk-nav-border: 1px solid #363636;
    --sk-nav-bg-img: url("/pictures/img/duesseldorf.svg") no-repeat bottom / contain;
+   --sk-nav-animation: gradientAnimation 100s infinite;
+   --sk-nav-bg-filter: none;
 
    --sk-text-color: rgba(255, 255, 255, 1);
    --sk-low-text-color: rgba(255, 255, 255, 0.6);
