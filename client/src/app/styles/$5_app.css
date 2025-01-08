@@ -54,6 +54,11 @@
    .app-container {
       margin: 0 10px 0 10px;
    }
+
+   [data-devices="mobile"] .app-container {
+      margin: 0 10px 0 10px;
+      padding: 80px 0 calc(var(--sidebar-mobile-h) + 10px) 0;
+   }
 }
 
 @media (max-width: 1024px) {}

@@ -82,7 +82,7 @@
       background: var(--sk-navi-link-bg-hover-color);
    }
 
-   [data-sidebar="short"] .navigation__item:active .navi-link__box {
+   .navigation__item:active .navi-link__box {
       animation: storm var(--animation-ms-s) ease-in-out;
    }
 }

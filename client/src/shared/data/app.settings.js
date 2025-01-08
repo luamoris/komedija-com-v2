@@ -16,9 +16,15 @@ export const SCHEMES = {
 
 // Значения для Devices
 export const DEVICES = {
-   phone: 'phone',
+   mobile: 'mobile',
    tablet: 'tablet',
-   computer: 'computer',
+   desktop: 'desktop',
+}
+
+export const DEVICES_MEDIA = {
+   mobile: '(max-width: 766px)',
+   tablet: '(min-width: 767px) and (max-width: 1199px)',
+   desktop: '(min-width: 1200px)',
 }
 
 // Значения для Sidebar
@@ -36,7 +42,7 @@ export const APP_SETTINGS = {
    },
    devices: {
       type: TYPES.devices,
-      default: DEVICES.computer,
+      default: DEVICES.desktop,
       values: DEVICES,
    },
    sidebar: {

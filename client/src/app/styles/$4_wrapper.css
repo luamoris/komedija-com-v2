@@ -27,6 +27,11 @@ body {
    [data-sidebar="short"] #wrapper {
       grid-template-columns: 80px auto;
    }
+
+   [data-devices="mobile"] #wrapper {
+      display: grid;
+      grid-template-columns: auto;
+   }
 }
 
 @media (max-width: 1024px) {}
