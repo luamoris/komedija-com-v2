@@ -1,27 +1,26 @@
-import { useContext } from "react";
+import Page from "../../effects/Page/Page.jsx";
+import useTranslation from "../../shared/hooks/useTranslation.jsx";
+import {APP_ROUTES} from "../../shared/data/app.routes.js";
 
 import "./Profile.css";
 
-// import { LanguageContext } from "../../shared/context/LanguageContext.jsx";
-
-import Page from "../../effects/Page/Page.jsx";
-
 
 export default function Profile() {
-   // const { ROUTES, TL } = useContext(LanguageContext);
-   // const head = {
-   //    type: "profile",
-   //    title: TL.PROFILE.meta.title,
-   //    description: TL.PROFILE.meta.description,
-   //    keywords: TL.PROFILE.meta.keywords,
-   //    path: ROUTES.PROFILE.path.long
-   // };
+   const { CODE: code, TRANSLATION: tr } = useTranslation();
+   const trData = tr.getTranslationByCode(code.code);
+   const path = APP_ROUTES(code.code);
 
-   // return (
-   //    <Page head={head}>
-   //       <h1 style={{ color: "#ffffff" }}>P</h1>
-   //    </Page>
-   // );
+   const head = {
+      type: "profile",
+      title: trData.profile.meta.title,
+      description: trData.profile.meta.description,
+      keywords: trData.profile.meta.keywords,
+      path: path.profile.long,
+   };
 
-   return <h1 style={{ color: "#ffffff" }}>P</h1>;
+   return (
+      <Page head={head}>
+         <h1 style={{ color: "#ffffff" }}>P</h1>
+      </Page>
+   );
 }

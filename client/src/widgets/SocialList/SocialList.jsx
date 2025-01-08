@@ -1,9 +1,9 @@
 import {memo} from "react";
 import PropTypes from "prop-types";
 
-import "./SocialList.css";
-
 import BtnTargetLink from "../../shared/ui/BtnTargetLink/BtnTargetLink";
+
+import "./SocialList.css";
 
 
 function SocialList({ list }) {

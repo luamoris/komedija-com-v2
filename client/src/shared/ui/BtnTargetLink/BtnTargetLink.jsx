@@ -1,8 +1,6 @@
 import {memo} from 'react';
 import PropTypes from 'prop-types';
-
 import './BtnTargetLink.css';
-
 import Icon from '../Icon/Icon';
 
 

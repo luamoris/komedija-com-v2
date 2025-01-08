@@ -1,7 +1,5 @@
 import { memo, useCallback, useContext } from "react";
 
-import './Sidebar.css';
-
 import SocialList from "../SocialList/SocialList";
 import NaviList from "../NaviList/NaviList";
 import Tools from "../../shared/ui/Tools/Tools.jsx";
@@ -9,11 +7,12 @@ import Tools from "../../shared/ui/Tools/Tools.jsx";
 import { GlobalSettingsContext } from "../../shared/context/GlobalSettingsContext.jsx";
 import { GlobalSettingsActionsContext } from "../../shared/context/GlobalSettingsContext.jsx";
 
-import { MEDIA } from "../../shared/data_2/strict/media.strict.js";
-import { TYPES, SIDEBAR } from "../../shared/data_2/app.settings.js";
+import { MEDIA } from "../../shared/data/strict/media.strict.js";
+import { TYPES, SIDEBAR } from "../../shared/data/app.settings.js";
 
+import {sFOOTER} from "../../shared/data/strict/footer.strict.js";
 
-const FOOTER_TEXT = '© Stand Up Community "KOMEDIJA"';
+import './Sidebar.css';
 
 
 function Sidebar() {
@@ -30,7 +29,7 @@ function Sidebar() {
 
          <div className="sidebar-header">
 
-            <Tools toggle={toggleShort} />
+            <Tools toggleMenu={toggleShort} />
             <div className="sidebar-header__separator"></div>
             <NaviList />
             <div className="sidebar-header__separator"></div>
@@ -40,7 +39,7 @@ function Sidebar() {
 
          <div className="sidebar-footer">
 
-            <span className="sidebar-footer__title">{FOOTER_TEXT}</span>
+            <span className="sidebar-footer__title">{sFOOTER.content}</span>
 
          </div>
 

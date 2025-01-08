@@ -15,35 +15,33 @@ export default function AppLocation({ children }) {
 
    console.log("App Location");
 
-   if (tr.TRANSITION.getCurrentCode().code !== tr.CODE.code) {
-      // console.log('!===');
-      // window.location.href = location.pathname;
-   }
-
    useEffect(() => {
-      // console.clear();
-      console.log("App Location Effect");
-      console.log(`== Path: ${JSON.stringify(location)}`);
-      console.log(`== Code CTX: ${JSON.stringify(tr.CODE)}`);
-      console.log(`== Code Current: ${JSON.stringify(tr.TRANSITION.getCurrentCode())}`);
-      console.log(`== Init: ${tr.TRANSITION.isInit()}`);
+      console.log("\t\t\t\t\t App Location Effect");
+      console.log(`Path: ${JSON.stringify(location)}`);
+      console.log(`Code Context: ${JSON.stringify(tr.CODE)}`);
+      console.log(`Code Current: ${JSON.stringify(tr.TRANSLATION.getCurrentCode())}`);
+      console.log(`Init: ${tr.TRANSLATION.isInit()}\n`);
 
-      const currentCode = tr.TRANSITION.getCurrentCode();
+      if (location.pathname === "/404") {
+         console.log(`===> Path Error: ${location.pathname}`);
+         return;
+      }
 
-      if (!tr.TRANSITION.isInit()) {
+      const currentCode = tr.TRANSLATION.getCurrentCode();
+
+      if (!tr.TRANSLATION.isInit()) {
          console.log(`====> Init code: ${currentCode.code}`);
-         tr.TRANSITION.setCode(currentCode.code);
+         tr.TRANSLATION.setCode(currentCode.code);
       }
 
       if (!currentCode.ok) {
-         console.log('====> Error 404');
+         console.log('====> Ошибка 404');
+         navigate("/404", { replace: true });
       }
 
       if (currentCode.code !== tr.CODE.code) {
          console.log('====> Изменился маршрут!');
-         // tra.SET_UPDATE(currentCode.code);
-         // navigate(location.pathname);
-         // window.location.href = location.pathname;
+         tra.SET_UPDATE(currentCode.code);
       }
 
    }, [location]);

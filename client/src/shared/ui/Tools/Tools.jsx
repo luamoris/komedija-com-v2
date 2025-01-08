@@ -1,16 +1,14 @@
 import {memo} from 'react';
 import PropTypes from 'prop-types';
-
+import Burger from "../Burger/Burger";
 import "./Tools.css";
 
-import Burger from "../Burger/Burger";
 
-
-function Tools({toggle}) {
+function Tools({toggleMenu}) {
    return (
       <div className="tools">
          <div className="tools-start">
-            <Burger classFather="tools__btn-menu" toggle={toggle} />
+            <Burger classFather="tools__btn-menu" toggle={toggleMenu} />
          </div>
          <div className="tools-middle"></div>
          <div className="tools-end"></div>
@@ -20,7 +18,7 @@ function Tools({toggle}) {
 
 
 Tools.propTypes = {
-   toggle: PropTypes.func,
+   toggleMenu: PropTypes.func,
 }
 
 export default memo(Tools);

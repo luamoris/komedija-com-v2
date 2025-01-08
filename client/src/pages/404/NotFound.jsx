@@ -1,27 +1,26 @@
-import { useContext } from "react";
+import Page from "../../effects/Page/Page.jsx";
+import useTranslation from "../../shared/hooks/useTranslation.jsx";
+import {APP_ROUTES} from "../../shared/data/app.routes.js";
 
 import "./NotFound.css";
 
-// import { LanguageContext } from "../../shared/context/LanguageContext.jsx";
-
-import Page from "../../effects/Page/Page.jsx";
-
 
 export default function NotFound() {
-   // const { ROUTES, TL } = useContext(LanguageContext);
-   // const head = {
-   //    type: "e404",
-   //    title: TL.NOTFOUND.meta.title,
-   //    description: TL.NOTFOUND.meta.description,
-   //    keywords: TL.NOTFOUND.meta.keywords,
-   //    path: ROUTES.NOTFOUND.path.long
-   // };
+   const { CODE: code, TRANSLATION: tr } = useTranslation();
+   const trData = tr.getTranslationByCode(code.code);
+   const path = APP_ROUTES(code.code);
 
-   // return (
-   //    <Page head={head}>
-   //       <h1 style={{ color: "#ffffff" }}>404</h1>
-   //    </Page>
-   // )
+   const head = {
+      type: "notFound",
+      title: trData.notFound.meta.title,
+      description: trData.notFound.meta.description,
+      keywords: trData.notFound.meta.keywords,
+      path: path.notFound.long,
+   };
 
-   return <h1 style={{ color: "#ffffff" }}>404</h1>;
+   return (
+      <Page head={head}>
+         <h1 style={{ color: "#ffffff" }}>404</h1>
+      </Page>
+   )
 }

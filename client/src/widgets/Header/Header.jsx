@@ -1,7 +1,5 @@
 import { memo } from "react";
 
-import './Header.css';
-
 import SwitchLanguages from "../SwitchLanguages/SwitchLanguages.jsx";
 
 import useTranslation from "../../shared/hooks/useTranslation.jsx";
@@ -9,10 +7,12 @@ import useTranslationActions from "../../shared/hooks/useTranslationActions.jsx"
 
 import Logo from "../../shared/ui/Logo/Logo";
 
+import './Header.css';
+
 
 
 function Header() {
-   const { CODE: code, TRANSITION: tr } = useTranslation();
+   const { CODE: code, TRANSLATION: tr } = useTranslation();
    const { SET_UPDATE: setCode } = useTranslationActions();
 
    return (

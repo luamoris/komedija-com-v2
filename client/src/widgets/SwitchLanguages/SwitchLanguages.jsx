@@ -1,10 +1,8 @@
 import {useCallback, memo} from 'react';
 import {useLocation, useNavigate} from 'react-router-dom';
 import PropTypes from 'prop-types';
-
-import "./SwitchLanguages.css";
-
 import LangCode from "../../shared/ui/LangCode/LangCode.jsx";
+import "./SwitchLanguages.css";
 
 
 function SwitchLanguages({codes, currentCode, setCode}) {

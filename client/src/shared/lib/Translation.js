@@ -48,6 +48,8 @@ export default class Translation {
       if (browserCode) {
          if (this.isExist(browserCode)) info.code = browserCode;
          else info.ok = false;
+      } else {
+         info.ok = false;
       }
 
       if (!info.ok) {

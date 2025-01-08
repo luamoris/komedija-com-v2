@@ -1,29 +1,28 @@
-import { memo, useContext } from "react";
+import Page from "../../effects/Page/Page.jsx";
+import useTranslation from "../../shared/hooks/useTranslation.jsx";
+import {APP_ROUTES} from "../../shared/data/app.routes.js";
 
 import "./Posters.css";
 
-// import { LanguageContext } from "../../shared/context/LanguageContext.jsx";
-
-import Page from "../../effects/Page/Page.jsx";
-
 
 function Posters() {
-   // const { ROUTES, TL } = useContext(LanguageContext);
-   // const head = {
-   //    type: "posters",
-   //    title: TL.POSTERS.meta.title,
-   //    description: TL.POSTERS.meta.description,
-   //    keywords: TL.POSTERS.meta.keywords,
-   //    path: ROUTES.POSTERS.path.long
-   // };
+   const { CODE: code, TRANSLATION: tr } = useTranslation();
+   const trData = tr.getTranslationByCode(code.code);
+   const path = APP_ROUTES(code.code);
 
-   // return (
-   //    <Page head={head}>
-   //       <h1 style={{ color: "#ffffff" }}>PS</h1>
-   //    </Page>
-   // );
+   const head = {
+      type: "posters",
+      title: trData.posters.meta.title,
+      description: trData.posters.meta.description,
+      keywords: trData.posters.meta.keywords,
+      path: path.posters.long,
+   };
 
-   return <h1 style={{ color: "#ffffff" }}>PS</h1>;
+   return (
+      <Page head={head}>
+         <h1 style={{ color: "#ffffff" }}>PS</h1>
+      </Page>
+   );
 }
 
 

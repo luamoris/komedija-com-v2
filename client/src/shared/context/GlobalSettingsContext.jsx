@@ -2,7 +2,7 @@ import { createContext, useState, useMemo, useCallback } from "react";
 import PropTypes from "prop-types";
 
 import GlobalSettings from "../lib/GlobalSettings.js";
-import { APP_SETTINGS } from "../data_2/app.settings.js";
+import { APP_SETTINGS } from "../data/app.settings.js";
 
 
 const gs = new GlobalSettings(APP_SETTINGS);

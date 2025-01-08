@@ -1,4 +1,4 @@
-export const CONFIG = {
+export const APP_CONFIG = {
    name: 'Stand Up Komedija',
    shortName: 'Komedija',
    domain: 'https://beta.skomedija.com', // ЗАМЕНИТЬ НА ОРИГИНАЛЬНЫЙ ДОМЕН
@@ -7,13 +7,14 @@ export const CONFIG = {
       default: 'ru',
       supported: ['ru', 'en', 'de'],
       country: 'DE',
+      localStorageName: 'language'
    },
    path: {
-      home: '/:lang',
-      login: '/:lang/auth',
-      posters: '/:lang/posters',
-      profile: '/:lang/profile',
-      e404: '*',
+      home: ':lang',
+      login: ':lang/login',
+      posters: ':lang/posters',
+      profile: ':lang/profile',
+      notFound: '404',
    },
    og: {
       type: {
@@ -21,7 +22,8 @@ export const CONFIG = {
          login: 'website',
          posters: 'website',
          profile: 'website',
-         e404: 'website',
+         notFound: 'website',
       }
    }
 };
+

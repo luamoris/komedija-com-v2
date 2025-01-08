@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import PropTypes from "prop-types";
 import {memo} from "react";
 
-import { CONFIG } from "../../shared/data/uilang/config.js";
+import {APP_CONFIG as ac} from "../../shared/data/app.config.js";
 
 /**
  * head:
@@ -14,14 +14,14 @@ import { CONFIG } from "../../shared/data/uilang/config.js";
  * 
  * */
 
-const _title = (title) => CONFIG.name + ' | ' + title;
+const _title = (title) => ac.name + ' | ' + title;
 
 const _alternates = (path) => {
-  const pathList =  path.replace(CONFIG.domain, '').split('/');
-  if (!pathList.length || pathList?.[1] === '*') return [];
+  const pathList =  path.replace(ac.domain, '').split('/');
+  if (!pathList.length || pathList?.[1] === '404') return [];
   const alternates = [];
-   pathList[0] = CONFIG.domain;
-   for (const sl of CONFIG.lang.supported) {
+   pathList[0] = ac.domain;
+   for (const sl of ac.lang.supported) {
       pathList[1] = sl;
       alternates.push({ code: sl, href: pathList.join('/')});
    }
@@ -45,9 +45,9 @@ function Page({ head, children }) {
                   <link rel="alternate" href={al[2].href} hrefLang={al[2].code}/>
                   <link rel="alternate" href={al[0].href} hrefLang='x-default'/>
 
-                  <meta property="og:locale" content={`${al[0].code}_${CONFIG.lang.country}`}/>
-                  <meta property="og:locale:alternate" content={`${al[1].code}_${CONFIG.lang.country}`}/>
-                  <meta property="og:locale:alternate" content={`${al[2].code}_${CONFIG.lang.country}`}/>
+                  <meta property="og:locale" content={`${al[0].code}_${ac.lang.country}`}/>
+                  <meta property="og:locale:alternate" content={`${al[1].code}_${ac.lang.country}`}/>
+                  <meta property="og:locale:alternate" content={`${al[2].code}_${ac.lang.country}`}/>
 
                   <meta property="og:url" content={al[0].href}/>
                </>
@@ -59,7 +59,7 @@ function Page({ head, children }) {
             <meta name="description" content={head.description}/>
             <meta name="keywords" content={head.keywords}/>
 
-            <meta property="og:type" content={CONFIG.og.type[head.type]}/>
+            <meta property="og:type" content={ac.og.type[head.type]}/>
 
             <meta property="og:title" content={_title(head.title)}/>
             <meta property="og:image" content="/favicon/favicon.ico"/>

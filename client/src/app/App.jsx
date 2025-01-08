@@ -6,7 +6,7 @@ import AppLocation from "./location/AppLocation";
 
 import Header from "../widgets/Header/Header";
 import Sidebar from "../widgets/Sidebar/Sidebar";
-import AppRouter_2 from "./routes/AppRouter_2";
+import AppRouter from "./routes/AppRouter";
 
 
 function AppContent() {
@@ -14,7 +14,7 @@ function AppContent() {
       <>
          <Header />
          <Sidebar />
-         <AppRouter_2 />
+         <AppRouter />
       </>
    );
 }

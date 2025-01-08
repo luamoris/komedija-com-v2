@@ -1,29 +1,32 @@
-import { memo, useContext } from "react";
+import {NavLink} from "react-router-dom";
+
+import Page from "../../effects/Page/Page.jsx";
+import useTranslation from "../../shared/hooks/useTranslation.jsx";
+
+import {APP_ROUTES} from "../../shared/data/app.routes.js";
 
 import "./Home.css";
 
-// import { LanguageContext } from "../../shared/context/LanguageContext.jsx";
-
-import Page from "../../effects/Page/Page.jsx";
-
 
 function Home() {
-   // const { ROUTES, TL } = useContext(LanguageContext);
-   // const head = {
-   //    type: "home",
-   //    title: TL.HOME.meta.title,
-   //    description: TL.HOME.meta.description,
-   //    keywords: TL.HOME.meta.keywords,
-   //    path: ROUTES.HOME.path.long
-   // };
+   const { CODE: code, TRANSLATION: tr } = useTranslation();
+   const trData = tr.getTranslationByCode(code.code);
+   const path = APP_ROUTES(code.code);
 
-   // return (
-   //    <Page head={head}>
-   //       <h1 style={{ color: "#ffffff" }}>1H</h1>
-   //    </Page>
-   // );
+   const head = {
+      type: "home",
+      title: trData.home.meta.title,
+      description: trData.home.meta.description,
+      keywords: trData.home.meta.keywords,
+      path: path.home.long,
+   };
 
-   return <h1 style={{ color: "#ffffff" }}>1H</h1>;
+   return (
+      <Page head={head}>
+         <h1 style={{ color: "#ffffff" }}>1-HOME</h1>
+         <NavLink to="/ent" style={{ color: "#ffffff" }}>GO TO ERROR</NavLink>
+      </Page>
+   );
 }
 
 export default Home;
