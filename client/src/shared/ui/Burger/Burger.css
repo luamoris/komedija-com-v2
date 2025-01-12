@@ -3,36 +3,39 @@
 ==================================== */
 
 .burger-box {
-    border-radius: var(--border-radius);
-    background-color: transparent;
-    cursor: pointer;
+   border-radius: var(--border-radius);
+   background-color: transparent;
+   cursor: pointer;
 
-    transition: background-color var(--animation-ms-s) ease-in-out;
+   transition: background-color var(--animation-ms-s) ease-in-out;
 }
 
 .burger {
-    position: relative;
-    top: calc(50% - 1px);
+   position: relative;
+   top: calc(50% - 1px);
 }
 
-.burger, .burger::after, .burger::before {
-    height: 3px;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 1px;
+.burger,
+.burger::after,
+.burger::before {
+   height: 3px;
+   width: 100%;
+   background-color: rgba(255, 255, 255, 0.6);
+   border-radius: 1px;
 }
 
-.burger::after, .burger::before {
-    content: "";
-    position: absolute;
+.burger::after,
+.burger::before {
+   content: "";
+   position: absolute;
 }
 
 .burger::after {
-    top: 8px;
+   top: 8px;
 }
 
 .burger::before {
-    top: -8px;
+   top: -8px;
 }
 
 /* =================================
@@ -40,23 +43,23 @@
 ==================================== */
 
 @media (hover: hover) and (pointer: fine) {
-    .burger-box:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-    }
+   .burger-box:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+   }
 
-    .burger-box:hover .burger {
-        animation: storm var(--animation-ms-s) ease-in-out;
-    }
+   .burger-box:hover .burger {
+      animation: storm var(--animation-ms-s) ease-in-out;
+   }
 }
 
 @media (hover: none) and (pointer: coarse) {
-    .burger-box:active {
-        background-color: rgba(255, 255, 255, 0.1);
-    }
+   .burger-box:active {
+      background-color: rgba(255, 255, 255, 0.1);
+   }
 
-    .burger-box:active .burger {
-        animation: storm var(--animation-ms-s) ease-in-out;
-    }
+   .burger-box:active .burger {
+      animation: storm var(--animation-ms-s) ease-in-out;
+   }
 }
 
 @media (max-width: 1024px) {}

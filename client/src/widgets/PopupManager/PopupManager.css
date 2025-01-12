@@ -1,34 +1,13 @@
 /* =================================
-   TOOLS
+   POPUP MANAGER
 ==================================== */
 
-.tools {
-    width: 100%;
-    height: 40px;
-    display: grid;
-    grid-template-columns: 40px 1fr auto;
-}
+.popup-manager {
+   min-height: 200px;
 
-.tools-start {
-    height: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.tools-middle {
-    height: 100%;
-}
-
-.tools-end {
-    height: 100%;
-}
-
-.tools__btn-menu {
-    padding: 6px;
-    width: 40px;
-    height: 40px;
+   display: flex;
+   align-items: start;
+   justify-content: space-between;
 }
 
 /* =================================

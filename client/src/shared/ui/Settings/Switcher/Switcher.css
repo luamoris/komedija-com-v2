@@ -1,0 +1,83 @@
+/* =================================
+   Switcher
+==================================== */
+
+.switcher {
+   width: 40px;
+   height: 24px;
+   padding: 2px;
+   border-radius: 4px;
+   border: 2px solid rgba(255, 255, 255, 0.6);
+   cursor: pointer;
+
+   transition: width var(--animation-ms-s) cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+.switcher__core {
+   margin: 0 0 0 0;
+   width: 16px;
+   height: 16px;
+   border-radius: 2px;
+   background-color: rgba(255, 255, 255, 0.6);
+
+   transition: margin var(--animation-ms-s) cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+.switcher.switcher_mode_start .switcher__core {
+   margin: 0 0 0 0;
+}
+
+.switcher.switcher_mode_end .switcher__core {
+   margin: 0 0 0 16px;
+}
+
+/* =================================
+   MEDIA
+==================================== */
+
+[data-sidebar="short"] .switcher {
+   display: none;
+}
+
+
+/* =================================
+   MEDIA
+==================================== */
+
+@media (hover:hover) {
+   .switcher {
+      width: 24px;
+   }
+
+   .switcher:hover {
+      width: 40px;
+   }
+
+   .switcher:hover.switcher_mode_end .switcher__core {
+      margin: 0 0 0 16px;
+   }
+
+   .switcher:not(:hover).switcher_mode_end .switcher__core {
+      margin: 0 0 0 0;
+   }
+
+   .switcher:hover .switcher__core {
+      animation: rubber var(--animation-ms-m) ease-in-out;
+   }
+}
+
+@media (max-width: 1960px) {}
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 500px) {}
+
+@media (max-width: 425px) {}
+
+@media (max-width: 375px) {}
+
+@media (max-width: 320px) {}
+
+/* ============ END :) ============ */

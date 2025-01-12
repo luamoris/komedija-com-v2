@@ -3,45 +3,51 @@
 ==================================== */
 
 .lang__code {
-    z-index: 0;
-    position: relative;
-    overflow: hidden;
-    margin: 2px;
-    padding: 4px;
+   z-index: 0;
+   position: relative;
+   overflow: hidden;
+   margin: 2px;
 
-    font-size: var(--h5);
-    color: var(--sk-lang-text-low-color);
+   width: 26px;
+   height: 24px;
 
-    transition: transform var(--animation-ms-s) cubic-bezier(0.075, 0.82, 0.165, 1);
-    cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   font-size: var(--h5);
+   color: var(--sk-lang-text-low-color);
+
+   transition: transform var(--animation-ms-s) cubic-bezier(0.075, 0.82, 0.165, 1);
+   cursor: pointer;
 }
 
 .lang__code:active {
-    transform: translateY(-2px);
+   transform: translateY(-2px);
 }
 
 .lang__code::after {
-    z-index: -1;
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    border-radius: 2px;
-    background-color: var(--sk-lang-text-active-color);
-    transform: translateY(102%);
-    transition: transform var(--animation-ms-s) ease-out;
+   z-index: -1;
+   content: "";
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   border-radius: 2px;
+   background-color: var(--sk-lang-text-active-color);
+   transform: translateY(102%);
+   transition: transform var(--animation-ms-s) ease-out;
 }
 
 .lang__code.lang__code_active {
-    color: var(--sk-lang-text-color);
-    pointer-events: none;
-    cursor: pointer;
+   color: var(--sk-lang-text-color);
+   pointer-events: none;
+   cursor: pointer;
 }
 
 .lang__code.lang__code_active::after {
-    transform: translateY(0);
+   transform: translateY(0);
 }
 
 
@@ -51,24 +57,24 @@
 
 @media (hover:hover) {
 
-    .lang__code:hover::after {
-        transform: translateY(0);
-    }
+   .lang__code:hover::after {
+      transform: translateY(0);
+   }
 
-    .lang__code:not(.lang__code_active):hover {
-        color: var(--sk-lang-text-color);
-    }
+   .lang__code:not(.lang__code_active):hover {
+      color: var(--sk-lang-text-color);
+   }
 }
 
 @media (hover:none) {
 
-    .lang__code:active::after {
-        transform: translateY(0);
-    }
+   .lang__code:active::after {
+      transform: translateY(0);
+   }
 
-    .lang__code:not(.lang__code_active):active {
-        color: var(--sk-lang-text-color);
-    }
+   .lang__code:not(.lang__code_active):active {
+      color: var(--sk-lang-text-color);
+   }
 }
 
 @media (max-width: 1024px) {}

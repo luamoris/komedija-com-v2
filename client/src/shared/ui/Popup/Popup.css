@@ -1,29 +1,35 @@
 /* =================================
-   TOOLS
+   POPUP
 ==================================== */
 
 .popup {
-    z-index: var(--z-index-nav);
-    overflow: hidden;
-    position: fixed;
-    bottom: calc(var(--sidebar-mobile-h) + 10px);
+   z-index: var(--z-index-nav);
+   overflow: hidden;
+   position: fixed;
+   bottom: calc(var(--sidebar-mobile-h) + 10px);
 
-    margin: 0 10px;
-    padding: 20px 10px 10px 10px;
-    width: calc(100% - 20px);
-    height: auto;
+   margin: 0 10px;
+   padding: 20px 10px 10px 10px;
+   width: calc(100% - 20px);
+   height: auto;
 
-    border: none;
-    border-radius: var(--border-radius);
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(4px);
+   border: none;
+   border-radius: var(--border-radius);
+   background: rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(4px);
 
-    transform: translateX(-120%);
-    transition: transform var(--animation-ms-s) ease-in;
+   visibility: hidden;
+   pointer-events: none;
+   transform: translateX(-120%);
+
+
+   transition: transform var(--animation-ms-s) ease-in, visibility var(--animation-ms-s) ease-in;
 }
 
 .popup.popup__open {
-    transform: translateX(0);
+   visibility: visible;
+   pointer-events: auto;
+   transform: translateX(0);
 }
 
 /* =================================

@@ -1,9 +1,9 @@
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import Page from "../../effects/Page/Page.jsx";
 import useTranslation from "../../shared/hooks/useTranslation.jsx";
 
-import {APP_ROUTES} from "../../shared/data/app.routes.js";
+import { APP_ROUTES } from "../../shared/data/app.routes.js";
 
 import "./Home.css";
 
@@ -25,6 +25,10 @@ function Home() {
       <Page head={head}>
          <h1 style={{ color: "#ffffff" }}>1-HOME</h1>
          <NavLink to="/ent" style={{ color: "#ffffff" }}>GO TO ERROR</NavLink>
+         <div className="test-block" style={{ width: "100%", height: "200px", backgroundColor: "rgba(10, 50, 100, .5)", borderRadius: "4px", margin: "10px 0" }}></div>
+         <div className="test-block" style={{ width: "100%", height: "200px", backgroundColor: "rgba(10, 50, 100, .5)", borderRadius: "4px", margin: "10px 0" }}></div>
+         <div className="test-block" style={{ width: "100%", height: "200px", backgroundColor: "rgba(10, 50, 100, .5)", borderRadius: "4px", margin: "10px 0" }}></div>
+         <div className="test-block" style={{ width: "100%", height: "200px", backgroundColor: "rgba(10, 50, 100, .5)", borderRadius: "4px", margin: "10px 0" }}></div>
       </Page>
    );
 }

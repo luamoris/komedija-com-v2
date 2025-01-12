@@ -5,6 +5,7 @@ export const TYPES = {
    scheme: 'scheme',
    devices: 'devices',
    sidebar: 'sidebar',
+   vibrate: 'vibrate',
 };
 
 // Значения для Schemes
@@ -33,6 +34,11 @@ export const SIDEBAR = {
    long: 'long',
 };
 
+export const VIBRATE = {
+   on: 'on',
+   off: 'off',
+}
+
 
 export const APP_SETTINGS = {
    scheme: {
@@ -50,4 +56,9 @@ export const APP_SETTINGS = {
       default: SIDEBAR.long,
       values: SIDEBAR,
    },
+   vibrate: {
+      type: TYPES.vibrate,
+      default: VIBRATE.on,
+      values: VIBRATE,
+   }
 };

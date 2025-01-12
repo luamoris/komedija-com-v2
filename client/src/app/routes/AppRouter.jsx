@@ -12,7 +12,7 @@ import Profile from "../../pages/profile/Profile";
 import useTranslation from "../../shared/hooks/useTranslation.jsx";
 import { APP_ROUTES } from "../../shared/data/app.routes.js";
 
-import {APP_CONFIG as ac} from "../../shared/data/app.config.js";
+import { APP_CONFIG as ac } from "../../shared/data/app.config.js";
 
 
 export default function AppRouter() {

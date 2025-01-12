@@ -2,7 +2,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 import Page from "../../effects/Page/Page.jsx";
 import useTranslation from "../../shared/hooks/useTranslation.jsx";
-import {APP_ROUTES} from "../../shared/data/app.routes.js";
+import { APP_ROUTES } from "../../shared/data/app.routes.js";
 
 import "./Login.css";
 
@@ -28,6 +28,7 @@ export default function Login() {
    return (
       <Page head={head}>
          <h1 style={{ color: "#ffffff" }}>{fromPage}</h1>
+         <div className="test-block" style={{ width: "100%", height: "200px", backgroundColor: "rgba(10, 50, 100, .5)", borderRadius: "4px", margin: "10px 0" }}></div>
       </Page>
    );
 }

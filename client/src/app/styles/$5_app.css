@@ -11,6 +11,9 @@
    display: flex;
    align-items: flex-start;
    justify-content: center;
+
+   --app-main-desktop-h: calc(100vh - 95px);
+   --app-main-mobile-h: calc(100vh - (60px + var(--sidebar-mobile-h) + 10px));
 }
 
 .app-container {
@@ -27,17 +30,10 @@
 .main {
    padding: 10px;
    width: 100%;
-   /* height: calc(100vh - 95px); */
-   height: 200vh;
-   background-color: rgba(255, 255, 255, 0.05);
-   /*background-color: #1d1d1d;*/
+   min-height: var(--app-main-desktop-h);
+   /* height: 200vh; */
+   /* background-color: rgba(255, 255, 255, 0.05); */
 }
-
-/* =================================
-   DATASET-SIDEBAR="SHORT"
-==================================== */
-
-
 
 /* =================================
    MEDIA
@@ -46,8 +42,6 @@
 @media (max-width: 1960px) {
 
    .app {
-      /*justify-content: flex-start;*/
-
       transition: margin var(--animation-ms-m) ease-in-out;
    }
 
@@ -58,6 +52,10 @@
    [data-devices="mobile"] .app-container {
       margin: 0 10px 0 10px;
       padding: 80px 0 calc(var(--sidebar-mobile-h) + 10px) 0;
+   }
+
+   [data-devices="mobile"] .main {
+      min-height: var(--app-main-mobile-h);
    }
 }
 

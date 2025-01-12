@@ -7,7 +7,6 @@
    overflow: hidden;
    position: fixed;
    top: 90px;
-   /*bottom: 5px;*/
    left: 10px;
 
    height: calc(100lvh - 95px);
@@ -32,7 +31,6 @@
    content: '';
    position: absolute;
    bottom: -2px;
-   left: 0;
 
    width: 101%;
    height: 200px;
@@ -41,6 +39,8 @@
 
    user-select: none;
    pointer-events: none;
+
+   transition: width var(--animation-ms-m) ease-in-out, height var(--animation-ms-m) ease-in-out;
 }
 
 /* =================================
@@ -71,7 +71,7 @@
 
 .sidebar-footer {
    overflow: hidden;
-   width: calc(var(--sidebar-width) - 2 * var(--global-padding));;
+   width: calc(var(--sidebar-width) - 2 * var(--global-padding));
    display: flex;
    align-items: flex-end;
    justify-content: start;
@@ -103,7 +103,8 @@
    height: 65px;
 }
 
-[data-sidebar="short"] .sidebar-header, [data-sidebar="short"] .sidebar-footer {
+[data-sidebar="short"] .sidebar-header,
+[data-sidebar="short"] .sidebar-footer {
    width: calc(var(--sidebar-width-short) - 2 * var(--global-padding));
 }
 
