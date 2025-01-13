@@ -25,10 +25,10 @@ function Home() {
       <Page head={head}>
          <h1 style={{ color: "#ffffff" }}>1-HOME</h1>
          <NavLink to="/ent" style={{ color: "#ffffff" }}>GO TO ERROR</NavLink>
-         <div className="test-block" style={{ width: "100%", height: "200px", backgroundColor: "rgba(10, 50, 100, .5)", borderRadius: "4px", margin: "10px 0" }}></div>
-         <div className="test-block" style={{ width: "100%", height: "200px", backgroundColor: "rgba(10, 50, 100, .5)", borderRadius: "4px", margin: "10px 0" }}></div>
-         <div className="test-block" style={{ width: "100%", height: "200px", backgroundColor: "rgba(10, 50, 100, .5)", borderRadius: "4px", margin: "10px 0" }}></div>
-         <div className="test-block" style={{ width: "100%", height: "200px", backgroundColor: "rgba(10, 50, 100, .5)", borderRadius: "4px", margin: "10px 0" }}></div>
+         <div className="test-block" style={{ width: "100%", height: "200px", backgroundColor: "rgba(0, 0, 0, .2)", borderRadius: "4px", margin: "10px 0" }}></div>
+         <div className="test-block" style={{ width: "100%", height: "200px", backgroundColor: "rgba(0, 0, 0, .2)", borderRadius: "4px", margin: "10px 0" }}></div>
+         <div className="test-block" style={{ width: "100%", height: "200px", backgroundColor: "rgba(0, 0, 0, .2)", borderRadius: "4px", margin: "10px 0" }}></div>
+         <div className="test-block" style={{ width: "100%", height: "200px", backgroundColor: "rgba(0, 0, 0, .2)", borderRadius: "4px", margin: "10px 0" }}></div>
       </Page>
    );
 }

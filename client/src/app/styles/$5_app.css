@@ -23,7 +23,7 @@
 
 [data-devices="mobile"] .app-container {
    margin: 0 10px 0 10px;
-   padding: 60px 0 calc(var(--sidebar-mobile-h) + 10px) 0;
+   padding: 70px 0 calc(var(--sidebar-mobile-h) + 10px) 0;
 }
 
 /* =================================
@@ -39,7 +39,7 @@
 
 [data-devices="mobile"] .main {
    padding: 0 5px;
-   min-height: calc(100lvh - 134px);
+   min-height: calc(100lvh - 144px);
 }
 
 /* =================================

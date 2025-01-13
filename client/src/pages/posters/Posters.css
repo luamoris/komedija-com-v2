@@ -20,11 +20,24 @@
 }
 
 .posters-banner {
+   position: relative;
    grid-area: banner;
    aspect-ratio: 3/1;
 
    border-radius: var(--border-radius);
    background: var(--sk-empty-bg);
+   filter: sepia(20%);
+}
+
+.posters-banner::after {
+   z-index: -1;
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: var(--sk-empty-bg);
+   filter: blur(30px);
+   opacity: 0.5;
 }
 
 .posters-title {
