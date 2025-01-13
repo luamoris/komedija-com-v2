@@ -17,7 +17,7 @@ import "./Page.css";
  * 
  * */
 
-const _title = (title) => ac.name + ' | ' + title;
+const _title = (type, title) => type === 'home' ? ac.name : title + ' | ' + ac.name;
 
 const _alternates = (path) => {
    const pathList = path.replace(ac.domain, '').split('/');
@@ -67,15 +67,15 @@ function Page({ head, children }) {
                </>
             }
 
-            <title>{_title(head.title)}</title>
+            <title>{_title(head.type, head.title)}</title>
 
-            <meta name="title" content={_title(head.title)} />
+            <meta name="title" content={_title(head.type, head.title)} />
             <meta name="description" content={head.description} />
             <meta name="keywords" content={head.keywords} />
 
             <meta property="og:type" content={ac.og.type[head.type]} />
 
-            <meta property="og:title" content={_title(head.title)} />
+            <meta property="og:title" content={_title(head.type, head.title)} />
             <meta property="og:image" content="/favicon/favicon.ico" />
             <meta property="og:description" content={head.description} />
 

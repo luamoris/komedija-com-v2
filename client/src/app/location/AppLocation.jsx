@@ -16,6 +16,9 @@ export default function AppLocation({ children }) {
    console.log("App Location");
 
    useEffect(() => {
+
+      scrollTo({ top: 0 });
+
       console.log("\t\t\t\t\t App Location Effect");
       console.log(`Path: ${JSON.stringify(location)}`);
       console.log(`Code Context: ${JSON.stringify(tr.CODE)}`);

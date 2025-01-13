@@ -7,7 +7,7 @@
    height: 24px;
    padding: 2px;
    border-radius: 4px;
-   border: 2px solid rgba(255, 255, 255, 0.6);
+   border: 2px solid var(--sk-switcher-main-color);
    cursor: pointer;
 
    transition: width var(--animation-ms-s) cubic-bezier(0.895, 0.03, 0.685, 0.22);
@@ -18,46 +18,39 @@
    width: 16px;
    height: 16px;
    border-radius: 2px;
-   background-color: rgba(255, 255, 255, 0.6);
+   background-color: var(--sk-switcher-main-color);
 
    transition: margin var(--animation-ms-s) cubic-bezier(0.895, 0.03, 0.685, 0.22);
 }
 
 .switcher.switcher_mode_start .switcher__core {
    margin: 0 0 0 0;
+   background-color: var(--sk-switcher-mode-1-color);
 }
 
 .switcher.switcher_mode_end .switcher__core {
    margin: 0 0 0 16px;
+   background-color: var(--sk-switcher-mode-2-color);
 }
-
-/* =================================
-   MEDIA
-==================================== */
-
-[data-sidebar="short"] .switcher {
-   display: none;
-}
-
 
 /* =================================
    MEDIA
 ==================================== */
 
 @media (hover:hover) {
-   .switcher {
+   .switcher.__long {
       width: 24px;
    }
 
-   .switcher:hover {
+   .switcher.__long:hover {
       width: 40px;
    }
 
-   .switcher:hover.switcher_mode_end .switcher__core {
+   .switcher.__long:hover.switcher_mode_end .switcher__core {
       margin: 0 0 0 16px;
    }
 
-   .switcher:not(:hover).switcher_mode_end .switcher__core {
+   .switcher.__long:not(:hover).switcher_mode_end .switcher__core {
       margin: 0 0 0 0;
    }
 

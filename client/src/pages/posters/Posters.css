@@ -2,15 +2,88 @@
    POSTER
 ==================================== */
 
+.posters {
+   /* max-width: 1200px; */
+   width: 100%;
+   height: 100%;
+
+   display: grid;
+   grid-template-columns: 1fr 300px;
+   grid-template-rows: auto 60px 1fr;
+   grid-template-areas:
+      "banner banner"
+      "title title"
+      "list sidebar"
+   ;
+   row-gap: 20px;
+   column-gap: 20px;
+}
+
+.posters-banner {
+   grid-area: banner;
+   aspect-ratio: 3/1;
+
+   border-radius: var(--border-radius);
+   background: var(--sk-empty-bg);
+}
+
+.posters-title {
+   grid-area: title;
+
+   background: rgba(0, 0, 0, 0.2);
+}
+
+.posters-list {
+   grid-area: list;
+   min-height: 400px;
+
+   background: rgba(0, 0, 0, 0.2);
+}
+
+.posters-sidebar {
+   grid-area: sidebar;
+   min-height: 200px;
+
+   background: rgba(0, 0, 0, 0.2);
+}
+
 
 
 /* =================================
    MEDIA
 ==================================== */
 
-@media (max-width: 1024px) {}
+@media (max-width: 1440px) {
+   .posters {
+      grid-template-columns: 1fr 240px;
+      grid-template-rows: auto 60px 1fr;
+   }
+}
 
-@media (max-width: 768px) {}
+@media (max-width: 1024px) {
+   .posters {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 60px auto auto;
+      grid-template-areas:
+         "banner"
+         "title"
+         "sidebar"
+         "list"
+      ;
+      row-gap: 10px;
+      column-gap: 10px;
+   }
+
+   .posters-banner {
+      aspect-ratio: 5/2;
+   }
+}
+
+@media (max-width: 768px) {
+   .posters-banner {
+      aspect-ratio: 5/3;
+   }
+}
 
 @media (max-width: 500px) {}
 

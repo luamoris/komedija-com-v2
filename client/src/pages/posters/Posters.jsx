@@ -20,8 +20,18 @@ function Posters() {
 
    return (
       <Page head={head}>
-         <h1 style={{ color: "#ffffff" }}>PS</h1>
-         <div className="test-block" style={{ width: "100%", height: "200px", backgroundColor: "rgba(10, 50, 100, .5)", borderRadius: "4px", margin: "10px 0" }}></div>``
+         {/* <h1 style={{ color: "#ffffff" }}>PS</h1> */}
+         {/* <div className="test-block" style={{ width: "100%", height: "200px", backgroundColor: "rgba(10, 50, 100, .5)", borderRadius: "4px", margin: "10px 0" }}></div> */}
+
+         <div className="posters">
+            <div className="posters-banner"></div>
+            <div className="posters-title"></div>
+            <div className="posters-list"></div>
+            <div className="posters-sidebar"></div>
+         </div>
+
+
+
       </Page>
    );
 }

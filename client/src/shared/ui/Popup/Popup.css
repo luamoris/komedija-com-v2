@@ -8,14 +8,14 @@
    position: fixed;
    bottom: calc(var(--sidebar-mobile-h) + 10px);
 
-   margin: 0 10px;
+   margin: 0 15px;
    padding: 20px 10px 10px 10px;
-   width: calc(100% - 20px);
+   width: calc(100% - 30px);
    height: auto;
 
    border: none;
    border-radius: var(--border-radius);
-   background: rgba(255, 255, 255, 0.2);
+   background: var(--sk-popup-bg);
    backdrop-filter: blur(4px);
 
    visibility: hidden;

@@ -70,6 +70,17 @@
    --sk-lang-text-low-color: rgba(255, 255, 255, 0.6);
    --sk-lang-text-active-color: rgba(255, 99, 71, 1);
 
+   /* Switcher Theme */
+   --sk-switcher-main-color: rgba(255, 255, 255, 0.6);
+   --sk-switcher-mode-1-color: rgba(219, 198, 116, 1);
+   --sk-switcher-mode-2-color: rgba(255, 255, 255, 0.8);
+
+   /* Standart */
+   --sk-empty-bg: linear-gradient(30deg, #62D9F4, #1ECC86);
+
+   /* Popup */
+   --sk-popup-bg: rgba(31, 115, 215, 0.5);
+
    /* ===== THEMES SK END ===== */
 
    /* PX */
@@ -93,13 +104,11 @@
 
    --sk-bg-color: linear-gradient(60deg, #005CA7, #2D5399);
 
-   --sk-nav-bg-color: linear-gradient(
-           60deg,
-           rgba(80, 144, 191, .5),
-           rgba(0, 92, 167, .5),
-           rgba(45, 83, 153, .5),
-           rgba(0, 53, 89, .5)
-   );
+   --sk-nav-bg-color: linear-gradient(60deg,
+         rgba(80, 144, 191, .5),
+         rgba(0, 92, 167, .5),
+         rgba(45, 83, 153, .5),
+         rgba(0, 53, 89, .5));
    --sk-nav-border: 1px solid rgba(255, 255, 255, 0.1);
    --sk-nav-bg-img: url("/pictures/img/duesseldorf.svg") no-repeat bottom / contain;
    --sk-nav-animation: gradientAnimation 100s infinite;
@@ -120,6 +129,17 @@
    --sk-lang-text-color: rgba(255, 255, 255, 1);
    --sk-lang-text-low-color: rgba(255, 255, 255, 0.6);
    --sk-lang-text-active-color: rgba(255, 99, 71, 1);
+
+   /* Switcher Theme */
+   --sk-switcher-main-color: rgba(255, 255, 255, 0.6);
+   --sk-switcher-mode-1-color: rgba(219, 198, 116, 1);
+   --sk-switcher-mode-2-color: rgba(255, 255, 255, 0.8);
+
+   /* Standart */
+   --sk-empty-bg: linear-gradient(30deg, #62D9F4, #1ECC86);
+
+   /* Popup */
+   --sk-popup-bg: rgba(31, 115, 215, 0.5);
 
    /* ===== THEMES SK END ===== */
 }
@@ -153,6 +173,17 @@
    --sk-lang-text-color: rgba(255, 255, 255, 1);
    --sk-lang-text-low-color: rgba(255, 255, 255, 0.6);
    --sk-lang-text-active-color: rgba(255, 99, 71, 1);
+
+   /* Switcher Theme */
+   --sk-switcher-main-color: rgba(255, 255, 255, 0.6);
+   --sk-switcher-mode-1-color: rgba(219, 198, 116, 1);
+   --sk-switcher-mode-2-color: rgba(255, 255, 255, 0.8);
+
+   /* Standart */
+   --sk-empty-bg: linear-gradient(30deg, #17363D, #0C4F34);
+
+   /* Popup */
+   --sk-popup-bg: rgba(36, 36, 36, 0.5);
 
    /* ===== THEMES SK END ===== */
 }

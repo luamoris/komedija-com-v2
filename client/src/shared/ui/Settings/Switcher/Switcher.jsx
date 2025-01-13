@@ -6,7 +6,7 @@ import "./Switcher.css";
 const _MODE = { start: 'start', end: 'end' };
 
 
-function Switcher({ toggle = () => null, currentMode = _MODE.start }) {
+function Switcher({ toggle = () => null, currentMode = _MODE.start, classFather = '' }) {
    const [mode, setMode] = useState(currentMode);
 
    const toggleSwitch = useCallback(() => {
@@ -15,7 +15,7 @@ function Switcher({ toggle = () => null, currentMode = _MODE.start }) {
    }, [toggle]);
 
    return (
-      <div className={`switcher switcher_mode_${mode}`} onClick={toggleSwitch}>
+      <div className={`switcher switcher_mode_${mode} ${classFather}`} onClick={toggleSwitch}>
          <div className="switcher__core"></div>
       </div>
    );
@@ -25,6 +25,7 @@ function Switcher({ toggle = () => null, currentMode = _MODE.start }) {
 Switcher.propTypes = {
    toggle: PropTypes.func,
    currentMode: PropTypes.string,
+   classFather: PropTypes.string,
 }
 
 export default memo(Switcher);

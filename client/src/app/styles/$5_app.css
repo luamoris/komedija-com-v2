@@ -11,9 +11,6 @@
    display: flex;
    align-items: flex-start;
    justify-content: center;
-
-   --app-main-desktop-h: calc(100vh - 95px);
-   --app-main-mobile-h: calc(100vh - (60px + var(--sidebar-mobile-h) + 10px));
 }
 
 .app-container {
@@ -21,6 +18,12 @@
    padding: 90px 0 5px 0;
    max-width: 1440px;
    width: 100%;
+   min-height: 100lvh;
+}
+
+[data-devices="mobile"] .app-container {
+   margin: 0 10px 0 10px;
+   padding: 60px 0 calc(var(--sidebar-mobile-h) + 10px) 0;
 }
 
 /* =================================
@@ -28,11 +31,15 @@
 ==================================== */
 
 .main {
-   padding: 10px;
+   padding: 10px 10px 0 10px;
    width: 100%;
-   min-height: var(--app-main-desktop-h);
-   /* height: 200vh; */
+   min-height: calc(100lvh - 95px);
    /* background-color: rgba(255, 255, 255, 0.05); */
+}
+
+[data-devices="mobile"] .main {
+   padding: 0 5px;
+   min-height: calc(100lvh - 134px);
 }
 
 /* =================================
@@ -47,15 +54,6 @@
 
    .app-container {
       margin: 0 10px 0 10px;
-   }
-
-   [data-devices="mobile"] .app-container {
-      margin: 0 10px 0 10px;
-      padding: 80px 0 calc(var(--sidebar-mobile-h) + 10px) 0;
-   }
-
-   [data-devices="mobile"] .main {
-      min-height: var(--app-main-mobile-h);
    }
 }
 
